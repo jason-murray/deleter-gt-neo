@@ -355,7 +355,7 @@
           "ContainerType": "Groups.CustomConditionalGroup",
           "Description": "RPM's"
         },
-{
+        {
           "LedContainers": [
             {
               "LedCount": 15,
@@ -402,10 +402,10 @@
               ],
               "ContainerType": "Groups.CustomConditionalGroup",
               "Description": "Fuel Low",
-                  "IsEnabled": false
-                }
-              ],
-                        "ContainerType": "Groups.MirrorGroup",
+              "IsEnabled": false
+            }
+          ],
+          "ContainerType": "Groups.MirrorGroup",
           "Description": "Mirror LEDs",
           "IsEnabled": false
         }
@@ -1774,7 +1774,7 @@
     {
       "CarModel": "BMW M Hybrid V8",
       "LedContainers": [
-{
+        {
           "BlinkDelay": 125,
           "Segments": [
             "1;96.25;#FF0000;0;"
@@ -1836,7 +1836,7 @@
             "Expression": "if(inertia([GameRawData.Telemetry.Voltage],150)=1,1,\r\n\r\nif(isincreasing(3000,[GameRawData.Telemetry.Voltage]),0,\r\n\r\nif(isdecreasing(3000,[GameRawData.Telemetry.EnterExitReset]),\r\n\r\nif(isincreasing(3000,[IsInPitLane]),0,1)\r\n\r\n,1)\r\n\r\n))"
           },
           "LedContainers": [
-{
+            {
               "TriggerFormula": {
                 "Expression": "in(isnull([Gear],0),'R','N','1')"
               },
@@ -13088,252 +13088,6 @@
       "Description": "Williams-Toyota FW31 F1"
     },
     {
-      "RpmMode": 2,
-      "OverrideMaxRPMWithRedlineValue": false,
-      "PercentMin": 88.0,
-      "PercentMax": 95.0,
-      "RPMMin": 0.0,
-      "RPMMax": 6900.0,
-      "BlinkDelay": 100,
-      "StartColor": "Lime",
-      "EndColor": "Red",
-      "LedCount": 15,
-      "BlinkEnabled": false,
-      "BlinkOnLastGear": false,
-      "UseLedDimming": false,
-      "RelativeToRedline": false,
-      "StartPosition": 4,
-      "ContainerType": "RPM",
-      "IsEnabled": false
-    },
-    {
-      "LedCount": 15,
-      "Color": "Cyan",
-      "BlinkEnabled": false,
-      "StartPosition": 4,
-      "ContainerType": "Flags.RedlineReached",
-      "Description": "Generates a static color when the redline is reached",
-      "IsEnabled": false
-    },
-    {
-      "LedCount": 15,
-      "Color1Alternate": "Blue",
-      "Color2Alternate": "Red",
-      "Color1SingleColor": "Blue",
-      "Color2SingleColor": "Red",
-      "AlternateDelay": 400,
-      "AlternateEnabled": true,
-      "BlinkColor1Delay": 500,
-      "LimiterBehavior": 1,
-      "Alternate2BlanckBackground": true,
-      "StartPosition": 4,
-      "ContainerType": "Status.SpeedLimiterAnimation",
-      "IsEnabled": false
-    },
-    {
-      "LedContainers": [
-        {
-          "TriggerFormula": {
-            "Expression": "if(isnull([Brake],0)>1,true,false)"
-          },
-          "LedContainers": [
-            {
-              "TotalWidth": 15,
-              "LedContainers": [
-                {
-                  "EnabledFormula": {
-                    "Expression": "if(in(isnull([CarId],0),'mercedesamgevogt3','mercedesamggt4'),false,\r\nif(isnull([GameRawData.Telemetry.BrakeABSactive]=0,0),0,1))"
-                  },
-                  "BlinkFormula": {
-                    "Expression": ""
-                  },
-                  "LedCount": 1,
-                  "Color": "Orchid",
-                  "BlinkEnabled": false,
-                  "StartPosition": 3,
-                  "ContainerType": "CustomStatus"
-                }
-              ],
-              "ContainerType": "Groups.MirrorGroup"
-            }
-          ],
-          "ContainerType": "Groups.CustomConditionalGroup"
-        }
-      ],
-      "ContainerType": "Base.Group",
-      "Description": "abs",
-      "IsEnabled": false
-    },
-    {
-      "TriggerFormula": {
-        "Expression": "if(isnull([GameRawData.Telemetry.dcHeadlightFlash])=1,0,1)"
-      },
-      "LedContainers": [
-        {
-          "EnabledFormula": {
-            "Expression": "if(isincreasing(2000,isnull([DataCorePlugin.GameRawData.Telemetry.dcHeadlightFlash],2)),true,\r\n\r\nif([GameRawData.Telemetry.dcHeadlightFlash]=1,true,false))"
-          },
-          "BlinkFormula": {
-            "Expression": ""
-          },
-          "LedCount": 1,
-          "Color": "Cyan",
-          "BlinkEnabled": true,
-          "BlinkDelay": 100,
-          "StartPosition": 3,
-          "ContainerType": "CustomStatus"
-        },
-        {
-          "EnabledFormula": {
-            "Expression": "if(isincreasing(2000,isnull([DataCorePlugin.GameRawData.Telemetry.dcHeadlightFlash],2)),true,\r\n\r\nif([GameRawData.Telemetry.dcHeadlightFlash]=1,true,false))"
-          },
-          "BlinkFormula": {
-            "Expression": ""
-          },
-          "LedCount": 1,
-          "Color": "Cyan",
-          "BlinkEnabled": true,
-          "BlinkDelay": 100,
-          "StartPosition": 19,
-          "ContainerType": "CustomStatus",
-          "Description": "Show static leds based on formulas copy"
-        }
-      ],
-      "ContainerType": "Groups.CustomConditionalGroup",
-      "Description": "Headlight Flash",
-      "IsEnabled": false
-    },
-    {
-      "LedContainers": [
-        {
-          "TotalWidth": 15,
-          "LedContainers": [
-            {
-              "LedCount": 3,
-              "Color": "Blue",
-              "BlinkEnabled": true,
-              "ContainerType": "Flags.BlueFlag",
-              "Description": "Generates a static color when the Blue flag is ON"
-            }
-          ],
-          "ContainerType": "Groups.MirrorGroup"
-        }
-      ],
-      "ContainerType": "Base.Group",
-      "Description": "blue flag",
-      "IsEnabled": false
-    },
-    {
-      "LedContainers": [
-        {
-          "TotalWidth": 15,
-          "LedContainers": [
-            {
-              "LedCount": 3,
-              "Color": "Lime",
-              "BlinkEnabled": false,
-              "BlinkDelay": 200,
-              "ContainerType": "Flags.GreenFlag",
-              "Description": "Generates a static color when the Green flag is ON"
-            }
-          ],
-          "ContainerType": "Groups.MirrorGroup"
-        }
-      ],
-      "ContainerType": "Base.Group",
-      "Description": "green",
-      "IsEnabled": false
-    },
-    {
-      "LedContainers": [
-        {
-          "TotalWidth": 15,
-          "LedContainers": [
-            {
-              "LedCount": 3,
-              "Color": "Yellow",
-              "BlinkEnabled": true,
-              "BlinkDelay": 200,
-              "ContainerType": "Flags.YellowFlag",
-              "Description": "Generates a static color when the Yellow flag is ON"
-            }
-          ],
-          "ContainerType": "Groups.MirrorGroup"
-        }
-      ],
-      "ContainerType": "Base.Group",
-      "Description": "yellow flag",
-      "IsEnabled": false
-    },
-    {
-      "LedContainers": [
-        {
-          "TriggerFormula": {
-            "Expression": "isincreasing(10000,isnull([Flag_White],0))"
-          },
-          "LedContainers": [
-            {
-              "TotalWidth": 15,
-              "LedContainers": [
-                {
-                  "Animation": {
-                    "Columns": 3,
-                    "Rows": 1,
-                    "Frames": [
-                      {
-                        "Colors": "0,1,White",
-                        "FrameDuration": 400
-                      },
-                      {
-                        "Colors": "0,0,White;0,2,White",
-                        "FrameDuration": 400
-                      }
-                    ],
-                    "PenColor": "White"
-                  },
-                  "ContainerType": "Animation"
-                }
-              ],
-              "ContainerType": "Groups.MirrorGroup"
-            }
-          ],
-          "ContainerType": "Groups.CustomConditionalGroup",
-          "Description": "White flag On"
-        }
-      ],
-      "ContainerType": "Base.Group",
-      "Description": "white flag",
-      "IsEnabled": false
-    },
-    {
-      "LedContainers": [
-        {
-          "LedCount": 3,
-          "Color": "Orange",
-          "BlinkEnabled": false,
-          "BlinkDelay": 200,
-          "OffDelay": 100,
-          "OnDelay": 200,
-          "ContainerType": "Status.SpotterCarLeft",
-          "Description": "Generates a static color when the a car is at your left"
-        },
-        {
-          "LedCount": 3,
-          "Color": "Orange",
-          "BlinkEnabled": false,
-          "BlinkDelay": 200,
-          "OffDelay": 100,
-          "OnDelay": 200,
-          "StartPosition": 19,
-          "ContainerType": "Status.SpotterCarRight",
-          "Description": "Generates a static color when the a car is at your right"
-        }
-      ],
-      "ContainerType": "Base.Group",
-      "Description": "spotter",
-      "IsEnabled": false
-    },
-    {
       "TriggerFormula": {
         "Expression": "if([GameRawData.Telemetry.IsReplayPlaying]=1,1,0)"
       },
@@ -13398,7 +13152,7 @@
     "Brake": 0.0,
     "GameName": "IRacing",
     "Fuel": 0.0,
-    "RPMPercent": 69.89795918367346,
+    "RPMPercent": 0.51020408163265318,
     "RPMRedlineReached": false,
     "SpeedKmh": 0.0,
     "SpeedMph": 0.0,
@@ -13406,7 +13160,7 @@
     "TurboPercent": 0.0,
     "Gear": "1",
     "IsInPitLane": false,
-    "PitLimiterOn": false,
+    "PitLimiterOn": true,
     "AbsEnabled": false,
     "AbsActive": false,
     "TCEnabled": false,
@@ -13419,16 +13173,16 @@
     "WhiteFlag": false,
     "BlueFlag": false,
     "GreenFlag": false,
-    "CarModel": "Audi R8 LMS",
+    "CarModel": "Cadillac V-Series.R",
     "CarId": null,
-    "CarStartedTime": "2021-02-25T14:41:08.6593049+01:00",
+    "CarStartedTime": "2021-02-25T13:41:08.6593049+00:00",
     "SessionBestDelta": 0.0,
     "AllTimeBestDelta": 0.0
   },
   "UseProfileBrightness": true,
-  "LastLoaded": "2024-01-20T00:54:36.4640084+01:00",
-  "Name": "20240310 iRacing Yoep de LEDLights 3-15-3 0-15-0",
-  "ProfileId": "d7fe98e9-b316-4b1d-b95d-07b5f83c3651",
+  "LastLoaded": "2024-01-19T23:54:36.4640084+00:00",
+  "Name": "iRacing Yoep de LEDLights 0-15-0 Rev Only",
+  "ProfileId": "44b0ad4f-7ac0-433a-bb9b-9bf0f48ba041",
   "GameCode": "IRacing",
   "CarChoice": null
 }

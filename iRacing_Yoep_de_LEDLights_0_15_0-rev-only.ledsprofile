@@ -356,6 +356,18 @@
           "Description": "RPM's"
         },
         {
+          "LedContainers": [
+            {
+              "LedCount": 15,
+              "Color": "Magenta",
+              "BlinkEnabled": false,
+              "ContainerType": "StaticColor",
+              "Description": "PURPLE"
+            }
+          ],
+          "ContainerType": "Groups.GameCarSpeedLimiterGroup"
+        },
+        {
           "TotalWidth": 15,
           "LedContainers": [
             {
@@ -391,40 +403,11 @@
               "ContainerType": "Groups.CustomConditionalGroup",
               "Description": "Fuel Low",
               "IsEnabled": false
-            },
-            {
-              "LedContainers": [
-                {
-                  "LedCount": 8,
-                  "Color": "Magenta",
-                  "BlinkEnabled": false,
-                  "ContainerType": "StaticColor",
-                  "Description": "PURPLE"
-                },
-                {
-                  "BlinkDelay": 125,
-                  "Segments": [
-                    "2;61.8;Black;0;",
-                    "2;56.8;Black;0;",
-                    "3;54.3;Black;0;",
-                    "2;51.8;Black;0;"
-                  ],
-                  "SegmentsCount": 4,
-                  "BlinkEnabled": false,
-                  "RpmMode": 0,
-                  "RelativeToRedline": false,
-                  "BlinkOnLastGear": false,
-                  "StartPosition": 2,
-                  "ContainerType": "RPMSegments",
-                  "Description": "Blackout RPM-based from the center for some reason",
-                  "IsEnabled": false
-                }
-              ],
-              "ContainerType": "Groups.GameCarSpeedLimiterGroup"
             }
           ],
           "ContainerType": "Groups.MirrorGroup",
-          "Description": "Mirror LEDs"
+          "Description": "Mirror LEDs",
+          "IsEnabled": false
         }
       ],
       "ContainerType": "Groups.GameCarModelGroup",
@@ -436,7 +419,7 @@
         {
           "LedContainers": [
             {
-              "LedCount": 9,
+              "LedCount": 6,
               "Color": "Lime",
               "BlinkEnabled": true,
               "DualBlinkTimingEnabled": true,
@@ -446,24 +429,24 @@
               "Description": "Generates a static color"
             },
             {
-              "LedCount": 2,
+              "LedCount": 3,
               "Color": "Yellow",
               "BlinkEnabled": true,
               "DualBlinkTimingEnabled": true,
               "OffDelay": 450,
               "OnDelay": 450,
-              "StartPosition": 5,
+              "StartPosition": 7,
               "ContainerType": "StaticColor",
               "Description": "Generates a static color copy"
             },
             {
-              "LedCount": 9,
+              "LedCount": 6,
               "Color": "Red",
               "BlinkEnabled": true,
               "DualBlinkTimingEnabled": true,
               "OffDelay": 450,
               "OnDelay": 450,
-              "StartPosition": 7,
+              "StartPosition": 10,
               "ContainerType": "StaticColor",
               "Description": "Generates a static color copy"
             }
@@ -1144,16 +1127,16 @@
         {
           "LedContainers": [
             {
-              "LedCount": 3,
+              "LedCount": 6,
               "Color": "Red",
               "BlinkEnabled": true,
               "BlinkDelay": 250,
-              "StartPosition": 8,
+              "StartPosition": 10,
               "ContainerType": "StaticColor",
               "Description": "Generates a static color"
             },
             {
-              "LedCount": 3,
+              "LedCount": 5,
               "Color": "Yellow",
               "BlinkEnabled": true,
               "BlinkDelay": 250,
@@ -1258,11 +1241,11 @@
               "LedContainers": [
                 {
                   "Animation": {
-                    "Columns": 10,
+                    "Columns": 15,
                     "Rows": 1,
                     "Frames": [
                       {
-                        "Colors": "0,0,Blue;0,2,Blue;0,4,Blue;0,5,Blue;0,7,Blue;0,9,Blue",
+                        "Colors": "0,0,Blue;0,7,Blue;0,3,Blue;0,6,Blue;0,8,Blue;0,11,Blue;0,14,Blue",
                         "FrameDuration": 250
                       },
                       {
@@ -1557,7 +1540,7 @@
           "Description": "Generates a static color when the speed limiter is ON copy"
         },
         {
-          "LedCount": 5,
+          "LedCount": 7,
           "Color": "DodgerBlue",
           "BlinkEnabled": true,
           "BlinkDelay": 248,
@@ -1792,6 +1775,20 @@
       "CarModel": "BMW M Hybrid V8",
       "LedContainers": [
         {
+          "BlinkDelay": 125,
+          "Segments": [
+            "1;96.25;#FF0000;0;"
+          ],
+          "SegmentsCount": 1,
+          "BlinkEnabled": false,
+          "RpmMode": 0,
+          "RelativeToRedline": false,
+          "BlinkOnLastGear": false,
+          "StartPosition": 8,
+          "ContainerType": "RPMSegments",
+          "Description": "Red line completion for centre LED"
+        },
+        {
           "TotalWidth": 15,
           "LedContainers": [
             {
@@ -1801,7 +1798,7 @@
                 "1;88.75;Lime;0;",
                 "1;91.25;Yellow;0;",
                 "2;93.75;Yellow;0;",
-                "2;96.25;Red;0;"
+                "2;96.25;#FF0000;0;"
               ],
               "SegmentsCount": 5,
               "BlinkEnabled": false,
@@ -1839,6 +1836,264 @@
             "Expression": "if(inertia([GameRawData.Telemetry.Voltage],150)=1,1,\r\n\r\nif(isincreasing(3000,[GameRawData.Telemetry.Voltage]),0,\r\n\r\nif(isdecreasing(3000,[GameRawData.Telemetry.EnterExitReset]),\r\n\r\nif(isincreasing(3000,[IsInPitLane]),0,1)\r\n\r\n,1)\r\n\r\n))"
           },
           "LedContainers": [
+            {
+              "TriggerFormula": {
+                "Expression": "in(isnull([Gear],0),'R','N','1')"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;80.011;Lime;0;",
+                    "1;82.869;#00FF00;0;",
+                    "1;85.727;Yellow;0;",
+                    "2;88.584;#FFFF00;0;",
+                    "5;91.442;Red;0;",
+                    "2;88.584;#FFFF00;0;",
+                    "1;85.727;#FFFF00;0;",
+                    "1;82.869;#00FF00;0;",
+                    "1;80.011;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;94.299;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "N/R/1"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "gear = '2'"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;81.44;Lime;0;",
+                    "1;84.298;#00FF00;0;",
+                    "1;87.155;Yellow;0;",
+                    "2;90.013;#FFFF00;0;",
+                    "5;92.87;Red;0;",
+                    "2;90.013;#FFFF00;0;",
+                    "1;87.155;#FFFF00;0;",
+                    "1;84.298;#00FF00;0;",
+                    "1;81.44;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;95.728;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "2nd"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "gear = '3'"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;82.869;Lime;0;",
+                    "1;85.727;#00FF00;0;",
+                    "1;88.584;Yellow;0;",
+                    "2;91.442;#FFFF00;0;",
+                    "5;94.299;Red;0;",
+                    "2;91.442;#FFFF00;0;",
+                    "1;88.584;#FFFF00;0;",
+                    "1;85.727;#00FF00;0;",
+                    "1;82.869;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;97.157;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "3rd"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "gear = '4'"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;83.583;Lime;0;",
+                    "1;86.441;#00FF00;0;",
+                    "1;89.298;Yellow;0;",
+                    "2;92.156;#FFFF00;0;",
+                    "5;95.014;Red;0;",
+                    "2;92.156;#FFFF00;0;",
+                    "1;89.298;#FFFF00;0;",
+                    "1;86.441;#00FF00;0;",
+                    "1;83.538;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;97.871;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "4th"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "gear = '5'"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;84.298;Lime;0;",
+                    "1;87.155;#00FF00;0;",
+                    "1;90.013;Yellow;0;",
+                    "2;92.87;#FFFF00;0;",
+                    "5;95.728;Red;0;",
+                    "2;92.87;#FFFF00;0;",
+                    "1;90.013;#FFFF00;0;",
+                    "1;87.155;#00FF00;0;",
+                    "1;84.298;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;98.586;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "5th"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "gear = '6'"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;85.012;Lime;0;",
+                    "1;87.87;#00FF00;0;",
+                    "1;90.727;Yellow;0;",
+                    "2;93.585;#FFFF00;0;",
+                    "5;96.442;Red;0;",
+                    "2;93.585;#FFFF00;0;",
+                    "1;90.727;#FFFF00;0;",
+                    "1;87.87;#00FF00;0;",
+                    "1;85.012;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;99.3;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "6th"
+            },
             {
               "TotalWidth": 15,
               "LedContainers": [
@@ -2077,7 +2332,8 @@
                   "Description": "6th"
                 }
               ],
-              "ContainerType": "Groups.MirrorGroup"
+              "ContainerType": "Groups.MirrorGroup",
+              "IsEnabled": false
             },
             {
               "TriggerFormula": {
@@ -2092,10 +2348,10 @@
                   "Description": "Blackout"
                 },
                 {
-                  "LedCount": 6,
+                  "LedCount": 7,
                   "Color": "Lime",
                   "BlinkEnabled": false,
-                  "StartPosition": 3,
+                  "StartPosition": 5,
                   "ContainerType": "StaticColor",
                   "Description": "Pit Speed safe"
                 },
@@ -2106,17 +2362,17 @@
                   "LedContainers": [
                     {
                       "Animation": {
-                        "Columns": 6,
+                        "Columns": 7,
                         "Rows": 1,
                         "Frames": [
                           {
-                            "Colors": "0,0,Red;0,1,Orange;0,2,Yellow;0,3,Yellow;0,4,Orange;0,5,Red",
+                            "Colors": "0,0,Red;0,1,Orange;0,2,Yellow;0,3,Yellow;0,4,Yellow;0,5,Orange;0,6,Red",
                             "FrameDuration": 100
                           }
                         ],
-                        "PenColor": "Orange"
+                        "PenColor": "Yellow"
                       },
-                      "StartPosition": 3,
+                      "StartPosition": 5,
                       "ContainerType": "Animation"
                     },
                     {
@@ -2126,10 +2382,10 @@
                       "BlinkFormula": {
                         "Expression": ""
                       },
-                      "LedCount": 4,
+                      "LedCount": 5,
                       "Color": "Black",
                       "BlinkEnabled": false,
-                      "StartPosition": 4,
+                      "StartPosition": 6,
                       "ContainerType": "CustomStatus",
                       "Description": "40+ over"
                     },
@@ -2140,10 +2396,10 @@
                       "BlinkFormula": {
                         "Expression": ""
                       },
-                      "LedCount": 2,
+                      "LedCount": 3,
                       "Color": "Black",
                       "BlinkEnabled": false,
-                      "StartPosition": 5,
+                      "StartPosition": 7,
                       "ContainerType": "CustomStatus",
                       "Description": "20-40 over"
                     }
@@ -2153,7 +2409,8 @@
                 }
               ],
               "ContainerType": "Groups.CustomConditionalGroup",
-              "Description": "Pit Limiter"
+              "Description": "Pit Limiter",
+              "IsEnabled": false
             }
           ],
           "ContainerType": "Groups.CustomConditionalGroup"
@@ -2814,6 +3071,18 @@
             }
           ],
           "ContainerType": "Groups.MirrorGroup"
+        },
+        {
+          "LedCount": 1,
+          "ColorFormula": {
+            "Expression": "'#FFFFFF'"
+          },
+          "BlinkEnabled": false,
+          "BlinkDelay": 500,
+          "DualBlinkTimingEnabled": false,
+          "OffDelay": 750,
+          "OnDelay": 125,
+          "ContainerType": "DynamicColor"
         }
       ],
       "ContainerType": "Groups.GameCarModelGroup",
@@ -13127,7 +13396,7 @@
     }
   ],
   "TestLedsGameData": {
-    "GearEx": 1,
+    "GearEx": 2,
     "FuelMax": 100.0,
     "RPMSMax": 10000.0,
     "TurboMax": 3.5,
@@ -13142,13 +13411,13 @@
     "Brake": 0.0,
     "GameName": "IRacing",
     "Fuel": 0.0,
-    "RPMPercent": 69.897959183673464,
+    "RPMPercent": 52.551020408163268,
     "RPMRedlineReached": false,
     "SpeedKmh": 0.0,
     "SpeedMph": 0.0,
     "Turbo": 0.0,
     "TurboPercent": 0.0,
-    "Gear": "1",
+    "Gear": "2",
     "IsInPitLane": false,
     "PitLimiterOn": false,
     "AbsEnabled": false,
@@ -13163,7 +13432,7 @@
     "WhiteFlag": false,
     "BlueFlag": false,
     "GreenFlag": false,
-    "CarModel": "BMW M4 GT4",
+    "CarModel": "Cadillac V-Series.R",
     "CarId": null,
     "CarStartedTime": "2021-02-25T13:41:08.6593049+00:00",
     "SessionBestDelta": 0.0,

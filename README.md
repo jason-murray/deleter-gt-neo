@@ -1,5 +1,5 @@
 # Yoep de GT Neo
-Unofficial Yoep de LEDLights profile adapted for the Simagic GT Neo wheel.
+Unofficial and opinionated Yoep de LEDLights profile adapted for the Simagic GT Neo wheel.
 
 Yoep uses a 3-10-3 layout by default utilising 10 rev lights and two 3 LED status clusters. The GT Neo by Simagic has a 15 LED rev light bar and no status clusters.
 
@@ -8,6 +8,7 @@ I have aimed to provide Yoep's incredibly accurate and valuable work in a suitab
 Aims:
 - Provide only rev light bar effects, as the status effects overwrite the edges of the rev bar.
 - Centre certain effects and patterns on the rev bar, ie effects that require 6 flashing lights in the middle of the bar are adapted to 5 to centre them.
+- Retain pit limiter effects only if they are shown on the rev bar.
 - Remain compatible with future Yoep releases.
 
 There are other approaches that could be taken for the status clusters, like flashing the upper 3 buttons on each side of the wheel. I may explore this at some point.

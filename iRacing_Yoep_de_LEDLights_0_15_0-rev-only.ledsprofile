@@ -355,6 +355,18 @@
           "ContainerType": "Groups.CustomConditionalGroup",
           "Description": "RPM's"
         },
+{
+          "LedContainers": [
+            {
+              "LedCount": 15,
+              "Color": "Magenta",
+              "BlinkEnabled": false,
+              "ContainerType": "StaticColor",
+              "Description": "PURPLE"
+            }
+          ],
+          "ContainerType": "Groups.GameCarSpeedLimiterGroup"
+        },
         {
           "TotalWidth": 15,
           "LedContainers": [
@@ -390,41 +402,12 @@
               ],
               "ContainerType": "Groups.CustomConditionalGroup",
               "Description": "Fuel Low",
-              "IsEnabled": false
-            },
-            {
-              "LedContainers": [
-                {
-                  "LedCount": 8,
-                  "Color": "Magenta",
-                  "BlinkEnabled": false,
-                  "ContainerType": "StaticColor",
-                  "Description": "PURPLE"
-                },
-                {
-                  "BlinkDelay": 125,
-                  "Segments": [
-                    "2;61.8;Black;0;",
-                    "2;56.8;Black;0;",
-                    "3;54.3;Black;0;",
-                    "2;51.8;Black;0;"
-                  ],
-                  "SegmentsCount": 4,
-                  "BlinkEnabled": false,
-                  "RpmMode": 0,
-                  "RelativeToRedline": false,
-                  "BlinkOnLastGear": false,
-                  "StartPosition": 2,
-                  "ContainerType": "RPMSegments",
-                  "Description": "Blackout RPM-based from the center for some reason",
                   "IsEnabled": false
                 }
               ],
-              "ContainerType": "Groups.GameCarSpeedLimiterGroup"
-            }
-          ],
-          "ContainerType": "Groups.MirrorGroup",
-          "Description": "Mirror LEDs"
+                        "ContainerType": "Groups.MirrorGroup",
+          "Description": "Mirror LEDs",
+          "IsEnabled": false
         }
       ],
       "ContainerType": "Groups.GameCarModelGroup",
@@ -436,7 +419,7 @@
         {
           "LedContainers": [
             {
-              "LedCount": 9,
+              "LedCount": 6,
               "Color": "Lime",
               "BlinkEnabled": true,
               "DualBlinkTimingEnabled": true,
@@ -446,24 +429,24 @@
               "Description": "Generates a static color"
             },
             {
-              "LedCount": 2,
+              "LedCount": 3,
               "Color": "Yellow",
               "BlinkEnabled": true,
               "DualBlinkTimingEnabled": true,
               "OffDelay": 450,
               "OnDelay": 450,
-              "StartPosition": 5,
+              "StartPosition": 7,
               "ContainerType": "StaticColor",
               "Description": "Generates a static color copy"
             },
             {
-              "LedCount": 9,
+              "LedCount": 6,
               "Color": "Red",
               "BlinkEnabled": true,
               "DualBlinkTimingEnabled": true,
               "OffDelay": 450,
               "OnDelay": 450,
-              "StartPosition": 7,
+              "StartPosition": 10,
               "ContainerType": "StaticColor",
               "Description": "Generates a static color copy"
             }
@@ -1144,16 +1127,16 @@
         {
           "LedContainers": [
             {
-              "LedCount": 3,
+              "LedCount": 6,
               "Color": "Red",
               "BlinkEnabled": true,
               "BlinkDelay": 250,
-              "StartPosition": 8,
+              "StartPosition": 10,
               "ContainerType": "StaticColor",
               "Description": "Generates a static color"
             },
             {
-              "LedCount": 3,
+              "LedCount": 5,
               "Color": "Yellow",
               "BlinkEnabled": true,
               "BlinkDelay": 250,
@@ -1258,11 +1241,11 @@
               "LedContainers": [
                 {
                   "Animation": {
-                    "Columns": 10,
+                    "Columns": 15,
                     "Rows": 1,
                     "Frames": [
                       {
-                        "Colors": "0,0,Blue;0,2,Blue;0,4,Blue;0,5,Blue;0,7,Blue;0,9,Blue",
+                        "Colors": "0,0,Blue;0,7,Blue;0,3,Blue;0,6,Blue;0,8,Blue;0,11,Blue;0,14,Blue",
                         "FrameDuration": 250
                       },
                       {
@@ -1557,7 +1540,7 @@
           "Description": "Generates a static color when the speed limiter is ON copy"
         },
         {
-          "LedCount": 5,
+          "LedCount": 7,
           "Color": "DodgerBlue",
           "BlinkEnabled": true,
           "BlinkDelay": 248,
@@ -1791,6 +1774,20 @@
     {
       "CarModel": "BMW M Hybrid V8",
       "LedContainers": [
+{
+          "BlinkDelay": 125,
+          "Segments": [
+            "1;96.25;#FF0000;0;"
+          ],
+          "SegmentsCount": 1,
+          "BlinkEnabled": false,
+          "RpmMode": 0,
+          "RelativeToRedline": false,
+          "BlinkOnLastGear": false,
+          "StartPosition": 8,
+          "ContainerType": "RPMSegments",
+          "Description": "Red line completion for centre LED"
+        },
         {
           "TotalWidth": 15,
           "LedContainers": [
@@ -1839,6 +1836,264 @@
             "Expression": "if(inertia([GameRawData.Telemetry.Voltage],150)=1,1,\r\n\r\nif(isincreasing(3000,[GameRawData.Telemetry.Voltage]),0,\r\n\r\nif(isdecreasing(3000,[GameRawData.Telemetry.EnterExitReset]),\r\n\r\nif(isincreasing(3000,[IsInPitLane]),0,1)\r\n\r\n,1)\r\n\r\n))"
           },
           "LedContainers": [
+{
+              "TriggerFormula": {
+                "Expression": "in(isnull([Gear],0),'R','N','1')"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;80.011;Lime;0;",
+                    "1;82.869;#00FF00;0;",
+                    "1;85.727;Yellow;0;",
+                    "2;88.584;#FFFF00;0;",
+                    "5;91.442;Red;0;",
+                    "2;88.584;#FFFF00;0;",
+                    "1;85.727;#FFFF00;0;",
+                    "1;82.869;#00FF00;0;",
+                    "1;80.011;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;94.299;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "N/R/1"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "gear = '2'"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;81.44;Lime;0;",
+                    "1;84.298;#00FF00;0;",
+                    "1;87.155;Yellow;0;",
+                    "2;90.013;#FFFF00;0;",
+                    "5;92.87;Red;0;",
+                    "2;90.013;#FFFF00;0;",
+                    "1;87.155;#FFFF00;0;",
+                    "1;84.298;#00FF00;0;",
+                    "1;81.44;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;95.728;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "2nd"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "gear = '3'"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;82.869;Lime;0;",
+                    "1;85.727;#00FF00;0;",
+                    "1;88.584;Yellow;0;",
+                    "2;91.442;#FFFF00;0;",
+                    "5;94.299;Red;0;",
+                    "2;91.442;#FFFF00;0;",
+                    "1;88.584;#FFFF00;0;",
+                    "1;85.727;#00FF00;0;",
+                    "1;82.869;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;97.157;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "3rd"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "gear = '4'"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;83.583;Lime;0;",
+                    "1;86.441;#00FF00;0;",
+                    "1;89.298;Yellow;0;",
+                    "2;92.156;#FFFF00;0;",
+                    "5;95.014;Red;0;",
+                    "2;92.156;#FFFF00;0;",
+                    "1;89.298;#FFFF00;0;",
+                    "1;86.441;#00FF00;0;",
+                    "1;83.538;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;97.871;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "4th"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "gear = '5'"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;84.298;Lime;0;",
+                    "1;87.155;#00FF00;0;",
+                    "1;90.013;Yellow;0;",
+                    "2;92.87;#FFFF00;0;",
+                    "5;95.728;Red;0;",
+                    "2;92.87;#FFFF00;0;",
+                    "1;90.013;#FFFF00;0;",
+                    "1;87.155;#00FF00;0;",
+                    "1;84.298;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;98.586;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "5th"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "gear = '6'"
+              },
+              "LedContainers": [
+                {
+                  "BlinkDelay": 125,
+                  "Segments": [
+                    "1;85.012;Lime;0;",
+                    "1;87.87;#00FF00;0;",
+                    "1;90.727;Yellow;0;",
+                    "2;93.585;#FFFF00;0;",
+                    "5;96.442;Red;0;",
+                    "2;93.585;#FFFF00;0;",
+                    "1;90.727;#FFFF00;0;",
+                    "1;87.87;#00FF00;0;",
+                    "1;85.012;#00FF00;0;"
+                  ],
+                  "SegmentsCount": 9,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "Show leds solid color segments based on car RPMs"
+                },
+                {
+                  "BlinkDelay": 0,
+                  "Segments": [
+                    "15;99.3;Red;0;"
+                  ],
+                  "SegmentsCount": 1,
+                  "BlinkEnabled": false,
+                  "RpmMode": 0,
+                  "RelativeToRedline": false,
+                  "BlinkOnLastGear": false,
+                  "ContainerType": "RPMSegments",
+                  "Description": "redline"
+                }
+              ],
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "6th"
+            },
             {
               "TotalWidth": 15,
               "LedContainers": [
@@ -1889,9 +2144,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;81.44;Lime;0;",
-                        "2;84.298;Lime;0;",
-                        "2;87.155;Yellow;0;",
+                        "1;81.44;Lime;0;",
+                        "1;84.298;Lime;0;",
+                        "1;87.155;Yellow;0;",
                         "2;90.013;Yellow;0;",
                         "2;92.87;Red;0;"
                       ],
@@ -1967,9 +2222,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;83.583;Lime;0;",
-                        "2;86.441;Lime;0;",
-                        "2;89.298;Yellow;0;",
+                        "1;83.583;Lime;0;",
+                        "1;86.441;Lime;0;",
+                        "1;89.298;Yellow;0;",
                         "2;92.156;Yellow;0;",
                         "2;95.014;Red;0;"
                       ],
@@ -2006,9 +2261,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;84.298;Lime;0;",
-                        "2;87.155;Lime;0;",
-                        "2;90.013;Yellow;0;",
+                        "1;84.298;Lime;0;",
+                        "1;87.155;Lime;0;",
+                        "1;90.013;Yellow;0;",
                         "2;92.87;Yellow;0;",
                         "2;95.728;Red;0;"
                       ],
@@ -2045,9 +2300,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;85.012;Lime;0;",
-                        "2;87.87;Lime;0;",
-                        "2;90.727;Yellow;0;",
+                        "1;85.012;Lime;0;",
+                        "1;87.87;Lime;0;",
+                        "1;90.727;Yellow;0;",
                         "2;93.585;Yellow;0;",
                         "2;96.442;Red;0;"
                       ],
@@ -2077,7 +2332,8 @@
                   "Description": "6th"
                 }
               ],
-              "ContainerType": "Groups.MirrorGroup"
+              "ContainerType": "Groups.MirrorGroup",
+              "IsEnabled": false
             },
             {
               "TriggerFormula": {
@@ -2092,10 +2348,10 @@
                   "Description": "Blackout"
                 },
                 {
-                  "LedCount": 6,
+                  "LedCount": 7,
                   "Color": "Lime",
                   "BlinkEnabled": false,
-                  "StartPosition": 3,
+                  "StartPosition": 5,
                   "ContainerType": "StaticColor",
                   "Description": "Pit Speed safe"
                 },
@@ -2106,17 +2362,17 @@
                   "LedContainers": [
                     {
                       "Animation": {
-                        "Columns": 6,
+                        "Columns": 7,
                         "Rows": 1,
                         "Frames": [
                           {
-                            "Colors": "0,0,Red;0,1,Orange;0,2,Yellow;0,3,Yellow;0,4,Orange;0,5,Red",
+                            "Colors": "0,0,Red;0,1,Orange;0,2,Yellow;0,3,Yellow;0,4,Yellow;0,5,Orange;0,6,Red",
                             "FrameDuration": 100
                           }
                         ],
-                        "PenColor": "Orange"
+                        "PenColor": "Yellow"
                       },
-                      "StartPosition": 3,
+                      "StartPosition": 5,
                       "ContainerType": "Animation"
                     },
                     {
@@ -2126,10 +2382,10 @@
                       "BlinkFormula": {
                         "Expression": ""
                       },
-                      "LedCount": 4,
+                      "LedCount": 5,
                       "Color": "Black",
                       "BlinkEnabled": false,
-                      "StartPosition": 4,
+                      "StartPosition": 6,
                       "ContainerType": "CustomStatus",
                       "Description": "40+ over"
                     },
@@ -2140,10 +2396,10 @@
                       "BlinkFormula": {
                         "Expression": ""
                       },
-                      "LedCount": 2,
+                      "LedCount": 3,
                       "Color": "Black",
                       "BlinkEnabled": false,
-                      "StartPosition": 5,
+                      "StartPosition": 7,
                       "ContainerType": "CustomStatus",
                       "Description": "20-40 over"
                     }
@@ -2482,8 +2738,8 @@
                   "BlinkDelay": 125,
                   "Segments": [
                     "1;0;Lime;0;",
-                    "2;31.818;Lime;0;",
-                    "2;40.909;Yellow;0;",
+                    "1;31.818;Lime;0;",
+                    "1;40.909;Yellow;0;",
                     "2;45.455;Yellow;0;",
                     "2;50;Red;0;"
                   ],
@@ -2503,7 +2759,7 @@
                   "BlinkFormula": {
                     "Expression": ""
                   },
-                  "LedCount": 5,
+                  "LedCount": 7,
                   "Color": "Blue",
                   "BlinkEnabled": false,
                   "ContainerType": "CustomStatus",
@@ -2521,9 +2777,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;50.568;Lime;0;",
-                    "2;57.386;Lime;0;",
-                    "2;66.477;Yellow;0;",
+                    "1;50.568;Lime;0;",
+                    "1;57.386;Lime;0;",
+                    "1;66.477;Yellow;0;",
                     "2;75.568;Yellow;0;",
                     "2;84.659;Red;0;"
                   ],
@@ -2542,7 +2798,7 @@
                   "BlinkFormula": {
                     "Expression": ""
                   },
-                  "LedCount": 10,
+                  "LedCount": 7,
                   "Color": "Blue",
                   "BlinkEnabled": false,
                   "ContainerType": "CustomStatus",
@@ -2560,9 +2816,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;60.975;Lime;0;",
-                    "2;65.909;Lime;0;",
-                    "2;73.295;Yellow;0;",
+                    "1;60.975;Lime;0;",
+                    "1;65.909;Lime;0;",
+                    "1;73.295;Yellow;0;",
                     "2;80.682;Yellow;0;",
                     "2;87.5;Red;0;"
                   ],
@@ -2581,7 +2837,7 @@
                   "BlinkFormula": {
                     "Expression": ""
                   },
-                  "LedCount": 10,
+                  "LedCount": 7,
                   "Color": "Blue",
                   "BlinkEnabled": false,
                   "ContainerType": "CustomStatus",
@@ -2599,9 +2855,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;70.739;Lime;0;",
-                    "2;74.659;Lime;0;",
-                    "2;80.114;Yellow;0;",
+                    "1;70.739;Lime;0;",
+                    "1;74.659;Lime;0;",
+                    "1;80.114;Yellow;0;",
                     "2;85.568;Yellow;0;",
                     "2;90.795;Red;0;"
                   ],
@@ -2620,7 +2876,7 @@
                   "BlinkFormula": {
                     "Expression": ""
                   },
-                  "LedCount": 10,
+                  "LedCount": 7,
                   "Color": "Blue",
                   "BlinkEnabled": false,
                   "ContainerType": "CustomStatus",
@@ -2638,9 +2894,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;82.102;Lime;0;",
-                    "2;83.75;Lime;0;",
-                    "2;87.443;Yellow;0;",
+                    "1;82.102;Lime;0;",
+                    "1;83.75;Lime;0;",
+                    "1;87.443;Yellow;0;",
                     "2;90.625;Yellow;0;",
                     "2;94.602;Red;0;"
                   ],
@@ -2659,7 +2915,7 @@
                   "BlinkFormula": {
                     "Expression": ""
                   },
-                  "LedCount": 10,
+                  "LedCount": 7,
                   "Color": "Blue",
                   "BlinkEnabled": false,
                   "ContainerType": "CustomStatus",
@@ -2677,9 +2933,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;87.5;Lime;0;",
-                    "2;88.92;Lime;0;",
-                    "2;91.761;Yellow;0;",
+                    "1;87.5;Lime;0;",
+                    "1;88.92;Lime;0;",
+                    "1;91.761;Yellow;0;",
                     "2;93.75;Yellow;0;",
                     "2;96.023;Red;0;"
                   ],
@@ -2698,7 +2954,7 @@
                   "BlinkFormula": {
                     "Expression": ""
                   },
-                  "LedCount": 10,
+                  "LedCount": 7,
                   "Color": "Blue",
                   "BlinkEnabled": false,
                   "ContainerType": "CustomStatus",
@@ -2716,9 +2972,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;91.477;Lime;0;",
-                    "2;93.068;Lime;0;",
-                    "2;94.886;Yellow;0;",
+                    "1;91.477;Lime;0;",
+                    "1;93.068;Lime;0;",
+                    "1;94.886;Yellow;0;",
                     "2;96.591;Yellow;0;",
                     "2;98.068;Red;0;"
                   ],
@@ -2737,7 +2993,7 @@
                   "BlinkFormula": {
                     "Expression": ""
                   },
-                  "LedCount": 10,
+                  "LedCount": 7,
                   "Color": "Blue",
                   "BlinkEnabled": false,
                   "ContainerType": "CustomStatus",
@@ -2755,9 +3011,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;95.227;Lime;0;",
-                    "2;95.625;Lime;0;",
-                    "2;96.307;Yellow;0;",
+                    "1;95.227;Lime;0;",
+                    "1;95.625;Lime;0;",
+                    "1;96.307;Yellow;0;",
                     "2;97.727;Yellow;0;",
                     "2;98.864;Red;0;"
                   ],
@@ -2776,7 +3032,7 @@
                   "BlinkFormula": {
                     "Expression": ""
                   },
-                  "LedCount": 10,
+                  "LedCount": 7,
                   "Color": "Blue",
                   "BlinkEnabled": false,
                   "ContainerType": "CustomStatus",
@@ -6435,9 +6691,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;42.857;Lime;0;",
-                    "2;44.286;Lime;0;",
-                    "2;45.714;Yellow;0;",
+                    "1;42.857;Lime;0;",
+                    "1;44.286;Lime;0;",
+                    "1;45.714;Yellow;0;",
                     "2;47.143;Yellow;0;",
                     "2;48.571;Blue;0;"
                   ],
@@ -6455,14 +6711,14 @@
                   },
                   "LedContainers": [
                     {
-                      "LedCount": 10,
+                      "LedCount": 7,
                       "Color": "Black",
                       "BlinkEnabled": false,
                       "ContainerType": "StaticColor",
                       "Description": "Blackout"
                     },
                     {
-                      "LedCount": 10,
+                      "LedCount": 7,
                       "Color": "Red",
                       "BlinkEnabled": true,
                       "BlinkDelay": 80,
@@ -6485,9 +6741,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;76.143;Lime;0;",
-                    "2;80;Lime;0;",
-                    "2;83.857;Yellow;0;",
+                    "1;76.143;Lime;0;",
+                    "1;80;Lime;0;",
+                    "1;83.857;Yellow;0;",
                     "2;87.714;Yellow;0;",
                     "2;91.517;Blue;0;"
                   ],
@@ -6505,14 +6761,14 @@
                   },
                   "LedContainers": [
                     {
-                      "LedCount": 10,
+                      "LedCount": 7,
                       "Color": "Black",
                       "BlinkEnabled": false,
                       "ContainerType": "StaticColor",
                       "Description": "Blackout"
                     },
                     {
-                      "LedCount": 10,
+                      "LedCount": 7,
                       "Color": "Red",
                       "BlinkEnabled": true,
                       "BlinkDelay": 80,
@@ -6535,9 +6791,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;77.857;Lime;0;",
-                    "2;81.429;Lime;0;",
-                    "2;85;Yellow;0;",
+                    "1;77.857;Lime;0;",
+                    "1;81.429;Lime;0;",
+                    "1;85;Yellow;0;",
                     "2;88.571;Yellow;0;",
                     "2;92.143;Blue;0;"
                   ],
@@ -6555,14 +6811,14 @@
                   },
                   "LedContainers": [
                     {
-                      "LedCount": 10,
+                      "LedCount": 7,
                       "Color": "Black",
                       "BlinkEnabled": false,
                       "ContainerType": "StaticColor",
                       "Description": "Blackout"
                     },
                     {
-                      "LedCount": 10,
+                      "LedCount": 7,
                       "Color": "Red",
                       "BlinkEnabled": true,
                       "BlinkDelay": 80,
@@ -6585,9 +6841,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;87.286;Lime;0;",
-                    "2;89.286;Lime;0;",
-                    "2;91.286;Yellow;0;",
+                    "1;87.286;Lime;0;",
+                    "1;89.286;Lime;0;",
+                    "1;91.286;Yellow;0;",
                     "2;93.286;Yellow;0;",
                     "2;95.286;Blue;0;"
                   ],
@@ -6605,14 +6861,14 @@
                   },
                   "LedContainers": [
                     {
-                      "LedCount": 10,
+                      "LedCount": 7,
                       "Color": "Black",
                       "BlinkEnabled": false,
                       "ContainerType": "StaticColor",
                       "Description": "Blackout"
                     },
                     {
-                      "LedCount": 10,
+                      "LedCount": 7,
                       "Color": "Red",
                       "BlinkEnabled": true,
                       "BlinkDelay": 80,
@@ -7746,9 +8002,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;37.975;Lime;0;",
-                        "2;39.241;Lime;0;",
-                        "2;40.506;Yellow;0;",
+                        "1;37.975;Lime;0;",
+                        "1;39.241;Lime;0;",
+                        "1;40.506;Yellow;0;",
                         "2;41.772;Yellow;0;",
                         "2;43.038;Red;0;"
                       ],
@@ -7766,14 +8022,14 @@
                       },
                       "LedContainers": [
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Black",
                           "BlinkEnabled": false,
                           "ContainerType": "StaticColor",
                           "Description": "Generates a static color"
                         },
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Red",
                           "BlinkEnabled": true,
                           "BlinkDelay": 250,
@@ -7796,9 +8052,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;53.418;Lime;0;",
-                        "2;60.759;Lime;0;",
-                        "2;68.101;Yellow;0;",
+                        "1;53.418;Lime;0;",
+                        "1;60.759;Lime;0;",
+                        "1;68.101;Yellow;0;",
                         "2;75.443;Yellow;0;",
                         "2;82.785;Red;0;"
                       ],
@@ -7816,14 +8072,14 @@
                       },
                       "LedContainers": [
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Black",
                           "BlinkEnabled": false,
                           "ContainerType": "StaticColor",
                           "Description": "Generates a static color"
                         },
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Red",
                           "BlinkEnabled": true,
                           "BlinkDelay": 250,
@@ -7846,9 +8102,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;63.291;Lime;0;",
-                        "2;68.354;Lime;0;",
-                        "2;73.418;Yellow;0;",
+                        "1;63.291;Lime;0;",
+                        "1;68.354;Lime;0;",
+                        "1;73.418;Yellow;0;",
                         "2;78.481;Yellow;0;",
                         "2;83.544;Red;0;"
                       ],
@@ -7866,14 +8122,14 @@
                       },
                       "LedContainers": [
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Black",
                           "BlinkEnabled": false,
                           "ContainerType": "StaticColor",
                           "Description": "Generates a static color"
                         },
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Red",
                           "BlinkEnabled": true,
                           "BlinkDelay": 250,
@@ -7896,9 +8152,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;78.228;Lime;0;",
-                        "2;80.38;Lime;0;",
-                        "2;82.532;Yellow;0;",
+                        "1;78.228;Lime;0;",
+                        "1;80.38;Lime;0;",
+                        "1;82.532;Yellow;0;",
                         "2;84.684;Yellow;0;",
                         "2;86.835;Red;0;"
                       ],
@@ -7916,14 +8172,14 @@
                       },
                       "LedContainers": [
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Black",
                           "BlinkEnabled": false,
                           "ContainerType": "StaticColor",
                           "Description": "Generates a static color"
                         },
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Red",
                           "BlinkEnabled": true,
                           "BlinkDelay": 250,
@@ -8213,9 +8469,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;43.478;Lime;0;",
-                        "2;44.928;Lime;0;",
-                        "2;46.377;Yellow;0;",
+                        "1;43.478;Lime;0;",
+                        "1;44.928;Lime;0;",
+                        "1;46.377;Yellow;0;",
                         "2;47.826;Yellow;0;",
                         "2;49.275;Red;0;"
                       ],
@@ -8233,14 +8489,14 @@
                       },
                       "LedContainers": [
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Black",
                           "BlinkEnabled": false,
                           "ContainerType": "StaticColor",
                           "Description": "Generates a static color"
                         },
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Red",
                           "BlinkEnabled": true,
                           "BlinkDelay": 250,
@@ -8263,9 +8519,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;58.696;Lime;0;",
-                        "2;65.217;Lime;0;",
-                        "2;71.739;Yellow;0;",
+                        "1;58.696;Lime;0;",
+                        "1;65.217;Lime;0;",
+                        "1;71.739;Yellow;0;",
                         "2;78.261;Yellow;0;",
                         "2;84.783;Red;0;"
                       ],
@@ -8283,14 +8539,14 @@
                       },
                       "LedContainers": [
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Black",
                           "BlinkEnabled": false,
                           "ContainerType": "StaticColor",
                           "Description": "Generates a static color"
                         },
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Red",
                           "BlinkEnabled": true,
                           "BlinkDelay": 250,
@@ -8313,9 +8569,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;67.391;Lime;0;",
-                        "2;72.464;Lime;0;",
-                        "2;77.536;Yellow;0;",
+                        "1;67.391;Lime;0;",
+                        "1;72.464;Lime;0;",
+                        "1;77.536;Yellow;0;",
                         "2;82.609;Yellow;0;",
                         "2;87.681;Red;0;"
                       ],
@@ -8333,14 +8589,14 @@
                       },
                       "LedContainers": [
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Black",
                           "BlinkEnabled": false,
                           "ContainerType": "StaticColor",
                           "Description": "Generates a static color"
                         },
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Red",
                           "BlinkEnabled": true,
                           "BlinkDelay": 250,
@@ -8363,9 +8619,9 @@
                     {
                       "BlinkDelay": 125,
                       "Segments": [
-                        "2;83.913;Lime;0;",
-                        "2;86.232;Lime;0;",
-                        "2;88.551;Yellow;0;",
+                        "1;83.913;Lime;0;",
+                        "1;86.232;Lime;0;",
+                        "1;88.551;Yellow;0;",
                         "2;90.87;Yellow;0;",
                         "2;93.188;Red;0;"
                       ],
@@ -8383,14 +8639,14 @@
                       },
                       "LedContainers": [
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Black",
                           "BlinkEnabled": false,
                           "ContainerType": "StaticColor",
                           "Description": "Generates a static color"
                         },
                         {
-                          "LedCount": 10,
+                          "LedCount": 7,
                           "Color": "Red",
                           "BlinkEnabled": true,
                           "BlinkDelay": 250,
@@ -9448,9 +9704,9 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "2;72.439;Red;0;",
-                    "3;70.122;Red;0;",
-                    "3;67.195;Red;0;"
+                    "1;72.439;Red;0;",
+                    "2;70.122;Red;0;",
+                    "2;67.195;Red;0;"
                   ],
                   "SegmentsCount": 3,
                   "BlinkEnabled": false,
@@ -10005,9 +10261,9 @@
                         {
                           "BlinkDelay": 125,
                           "Segments": [
-                            "2;61.714;Yellow;0;",
-                            "2;67.429;Yellow;0;",
-                            "2;73.143;Yellow;0;",
+                            "1;61.714;Yellow;0;",
+                            "1;67.429;Yellow;0;",
+                            "1;73.143;Yellow;0;",
                             "2;78.857;Red;0;",
                             "2;84.571;Red;0;"
                           ],
@@ -10025,14 +10281,14 @@
                           },
                           "LedContainers": [
                             {
-                              "LedCount": 10,
+                              "LedCount": 7,
                               "Color": "Black",
                               "BlinkEnabled": false,
                               "ContainerType": "StaticColor",
                               "Description": "Generates a static color"
                             },
                             {
-                              "LedCount": 10,
+                              "LedCount": 7,
                               "Color": "Cyan",
                               "BlinkEnabled": true,
                               "BlinkDelay": 250,
@@ -10605,9 +10861,9 @@
                         {
                           "BlinkDelay": 125,
                           "Segments": [
-                            "2;50;Yellow;0;",
-                            "2;59.926;Yellow;0;",
-                            "2;68.895;Yellow;0;",
+                            "1;50;Yellow;0;",
+                            "1;59.926;Yellow;0;",
+                            "1;68.895;Yellow;0;",
                             "2;77.368;Red;0;",
                             "2;85.421;Red;0;"
                           ],
@@ -10625,14 +10881,14 @@
                           },
                           "LedContainers": [
                             {
-                              "LedCount": 10,
+                              "LedCount": 7,
                               "Color": "Black",
                               "BlinkEnabled": false,
                               "ContainerType": "StaticColor",
                               "Description": "Generates a static color"
                             },
                             {
-                              "LedCount": 10,
+                              "LedCount": 7,
                               "Color": "RoyalBlue",
                               "BlinkEnabled": true,
                               "BlinkDelay": 248,
@@ -12621,9 +12877,9 @@
             "1;82.807;Lime;0;",
             "1;85.614;Lime;0;",
             "1;88.421;Lime;0;",
-            "2;91.228;Lime;0;",
-            "2;92.632;Yellow;0;",
-            "2;94.035;Yellow;0;",
+            "1;91.228;Lime;0;",
+            "1;92.632;Yellow;0;",
+            "1;94.035;Yellow;0;",
             "2;95.439;Red;0;",
             "2;96.842;Red;0;"
           ],
@@ -12667,7 +12923,7 @@
             {
               "BlinkDelay": 125,
               "Segments": [
-                "4;84.314;Lime;1;Blue",
+                "3;84.314;Lime;1;Blue",
                 "5;88.739;Red;1;Blue",
                 "4;93.109;Cyan;1;Blue"
               ],
@@ -12691,7 +12947,7 @@
             {
               "BlinkDelay": 125,
               "Segments": [
-                "4;82.185;Lime;1;Blue",
+                "3;82.185;Lime;1;Blue",
                 "5;85.322;Red;1;Blue",
                 "4;88.796;Cyan;1;Blue"
               ],
@@ -13142,7 +13398,7 @@
     "Brake": 0.0,
     "GameName": "IRacing",
     "Fuel": 0.0,
-    "RPMPercent": 69.897959183673464,
+    "RPMPercent": 69.89795918367346,
     "RPMRedlineReached": false,
     "SpeedKmh": 0.0,
     "SpeedMph": 0.0,
@@ -13163,16 +13419,16 @@
     "WhiteFlag": false,
     "BlueFlag": false,
     "GreenFlag": false,
-    "CarModel": "BMW M4 GT4",
+    "CarModel": "Audi R8 LMS",
     "CarId": null,
-    "CarStartedTime": "2021-02-25T13:41:08.6593049+00:00",
+    "CarStartedTime": "2021-02-25T14:41:08.6593049+01:00",
     "SessionBestDelta": 0.0,
     "AllTimeBestDelta": 0.0
   },
   "UseProfileBrightness": true,
-  "LastLoaded": "2024-01-19T23:54:36.4640084+00:00",
-  "Name": "iRacing Yoep de LEDLights 0-15-0 Rev Only",
-  "ProfileId": "7462948f-c3d2-4098-8c63-b670dd03d474",
+  "LastLoaded": "2024-01-20T00:54:36.4640084+01:00",
+  "Name": "20240310 iRacing Yoep de LEDLights 3-15-3 0-15-0",
+  "ProfileId": "d7fe98e9-b316-4b1d-b95d-07b5f83c3651",
   "GameCode": "IRacing",
   "CarChoice": null
 }

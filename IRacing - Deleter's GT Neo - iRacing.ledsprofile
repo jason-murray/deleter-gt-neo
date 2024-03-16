@@ -1,0 +1,425 @@
+{
+  "EmbeddedJavascript": null,
+  "GlobalBrightness": 50.0,
+  "GlobalBrightnessPreset": {
+    "CurrentMode": 0,
+    "Brightness": 50.0,
+    "BrightnessSettings": {}
+  },
+  "LedContainers": [
+    {
+      "ContentFormula": {
+        "JSExt": 0,
+        "Interpreter": 1,
+        "Expression": "// Set up light array.\r\nvar encoderLights = Array(12).fill('#667f03fc');\r\n\r\n// Blackout off (position 0)\r\nencoderLights.splice(0, 1, '#00000000');\r\n\r\n// Light up current level (off is red)\r\nif($prop('ABSLevel') == 12 || $prop('ABSLevel') == 0) {\r\n\tencoderLights.splice(0, 1, '#ffff0000');\r\n} else {\r\n\tencoderLights.splice($prop('ABSLevel'), 1, '#ff00FF00');\r\n}\r\n\r\n// Shift lights so off is at 9 o'clock position\r\nencoderLights = move(encoderLights, -3);\r\n\r\n\r\nreturn encoderLights;",
+        "PreExpression": "//returns a new array with the items shifted\r\nfunction move(arr, offset=0){\r\n  //positive offsets move right\r\n  const pivot = (offset < 0? 0: arr.length) - offset % arr.length;\r\n  //positive offsets move left\r\n  //const pivot = (offset < 0? arr.length: 0) + offset % arr.length;\r\n  return arr.slice(pivot).concat(arr.slice(0, pivot));\r\n}"
+      },
+      "LedCount": 12,
+      "StartPosition": 23,
+      "ContainerType": "ScriptedContent",
+      "Description": "ABS TRACKER"
+    },
+    {
+      "ContentFormula": {
+        "JSExt": 0,
+        "Interpreter": 1,
+        "Expression": "// Set up light array.\r\nvar encoderLights = Array(12).fill('#660390fc');\r\n\r\n// Blackout off (position 0)\r\nencoderLights.splice(0, 1, '#00000000');\r\n\r\n// Light up current level (off is red)\r\nif($prop('TCLevel') == 12 || $prop('TCLevel') == 0) {\r\n\tencoderLights.splice(0, 1, '#ffff0000');\r\n} else {\r\n\tencoderLights.splice($prop('TCLevel'), 1, '#fffc9803');\r\n}\r\n\r\n// Shift lights so off is at 9 o'clock position\r\nencoderLights = move(encoderLights, -3);\r\n\r\n\r\nreturn encoderLights;",
+        "PreExpression": "//returns a new array with the items shifted\r\nfunction move(arr, offset=0){\r\n  //positive offsets move right\r\n  const pivot = (offset < 0? 0: arr.length) - offset % arr.length;\r\n  //positive offsets move left\r\n  //const pivot = (offset < 0? arr.length: 0) + offset % arr.length;\r\n  return arr.slice(pivot).concat(arr.slice(0, pivot));\r\n}"
+      },
+      "LedCount": 12,
+      "StartPosition": 11,
+      "ContainerType": "ScriptedContent",
+      "Description": "TC TRACKER"
+    },
+    {
+      "LedContainers": [
+        {
+          "Delay": 140,
+          "ScrollMode": 0,
+          "LedContainers": [
+            {
+              "StartColor": "Orange",
+              "EndColor": "Purple",
+              "MaximumValue": 100.0,
+              "MinimumValue": 0.0,
+              "BlinkFormula": {
+                "Expression": ""
+              },
+              "EnabledFormula": {
+                "Expression": ""
+              },
+              "ValueFormula": {
+                "Expression": "100"
+              },
+              "LedCount": 12,
+              "GradientOnAll": false,
+              "ClearWhenOut": false,
+              "UseLedDimming": true,
+              "BlinkDelay": 500,
+              "BlinkEnabled": false,
+              "ContainerType": "CustomGradient"
+            }
+          ],
+          "StartPosition": 35,
+          "ContainerType": "Groups.ScrollGroup",
+          "Description": "BOTTOM LEFT ROTARY"
+        },
+        {
+          "Delay": 140,
+          "ScrollMode": 1,
+          "LedContainers": [
+            {
+              "StartColor": "Purple",
+              "EndColor": "Orange",
+              "MaximumValue": 100.0,
+              "MinimumValue": 0.0,
+              "BlinkFormula": {
+                "Expression": ""
+              },
+              "EnabledFormula": {
+                "Expression": ""
+              },
+              "ValueFormula": {
+                "Expression": "100"
+              },
+              "LedCount": 12,
+              "GradientOnAll": false,
+              "ClearWhenOut": false,
+              "UseLedDimming": true,
+              "BlinkDelay": 500,
+              "BlinkEnabled": false,
+              "ContainerType": "CustomGradient"
+            }
+          ],
+          "StartPosition": 47,
+          "ContainerType": "Groups.ScrollGroup",
+          "Description": "BOTTOM RIGHT ROTARY"
+        }
+      ],
+      "ContainerType": "Base.Group",
+      "Description": "BOTTOM ROTARY COLOUR CYCLE",
+      "IsEnabled": false
+    },
+    {
+      "ContentFormula": {
+        "JSExt": 0,
+        "Interpreter": 1,
+        "Expression": "// Set up light array.\r\nvar encoderLights = Array(12).fill('#2000FF00', 1, 7);\r\n\r\n// Calculate segments from maximum tank size for session. E.g. 50L for GT3 Sprint\r\nvar sessionTankLitres = $prop('GameRawData.SessionData.DriverInfo.DriverCarFuelMaxLtr') * $prop('GameRawData.SessionData.DriverInfo.DriverCarMaxFuelPct');\r\n\r\nvar tankSegments = sessionTankLitres / 7;\r\n\r\ntankSegments = $prop('Fuel') / tankSegments; \r\n\r\nvar filledSegments = Array(Math.round(tankSegments)).fill('#FF00FF00');\r\n\r\nencoderLights.splice(0, filledSegments.length, ...filledSegments);\r\n\r\n// Idle low fuel.\r\nencoderLights.splice(0, 1, '#22FF0000');\r\n\r\n// Blinker loop for low fuel\r\nlet time = timespantoseconds($prop('DataCorePlugin.CurrentDateTime'));\r\n    \r\nif (root.toggle == null) {\r\n    root.toggle = false;\r\n    root.triggerTime = time;\r\n      delay1 = .5;\r\n      delay2 = .5;\r\n}    \r\nif (time - root.triggerTime >= (root.toggle ? delay2 : delay1)) {    \r\n    root.toggle = !root.toggle;\r\n    root.triggerTime = time;\r\n}\r\n\r\nif (root.toggle) {\r\n\tif (Math.round(tankSegments) == 0) {\r\n\t\tencoderLights.splice(0, 1, '#FFFF0000');\r\n\t}\r\n\tif ($prop('DataCorePlugin.Computed.Fuel_RemainingLaps') < 2 && $prop('DataCorePlugin.Computed.Fuel_RemainingLaps') != 0) {\r\n\t\tencoderLights.splice(0, 1, '#FFFF0000');\r\n\t\t\r\n\t\tvar boxLapSegments = Array(7).fill('#FFFF0000');\r\n\r\n\t\tencoderLights.splice(0, 7, ...boxLapSegments);\r\n\t}\r\n}\r\n\r\n// Light up current level (off is red)\r\n//if($prop('TCLevel') == 12 || $prop('TCLevel') == 0) {\r\n//\tencoderLights.splice(0, 1, '#ffff0000');\r\n//} else {\r\n//\tencoderLights.splice($prop('TCLevel'), 1, '#fffc9803');\r\n//}\r\n\r\n// Shift lights so off is at 9 o'clock position\r\nencoderLights = move(encoderLights, -3);\r\n\r\n\r\nreturn encoderLights;",
+        "PreExpression": "//returns a new array with the items shifted\r\nfunction move(arr, offset=0){\r\n  //positive offsets move right\r\n  const pivot = (offset < 0? 0: arr.length) - offset % arr.length;\r\n  //positive offsets move left\r\n  //const pivot = (offset < 0? arr.length: 0) + offset % arr.length;\r\n  return arr.slice(pivot).concat(arr.slice(0, pivot));\r\n}"
+      },
+      "LedCount": 12,
+      "StartPosition": 47,
+      "ContainerType": "ScriptedContent",
+      "Description": "FUEL GAUGE"
+    },
+    {
+      "TotalWidth": 10,
+      "LedContainers": [
+        {
+          "StartColor": "Indigo",
+          "EndColor": "255, 111, 0",
+          "MaximumValue": 100.0,
+          "MinimumValue": 0.0,
+          "BlinkFormula": {
+            "Expression": ""
+          },
+          "EnabledFormula": {
+            "Expression": ""
+          },
+          "ValueFormula": {
+            "Expression": "100"
+          },
+          "LedCount": 5,
+          "GradientOnAll": false,
+          "ClearWhenOut": false,
+          "UseLedDimming": true,
+          "BlinkDelay": 500,
+          "BlinkEnabled": false,
+          "ContainerType": "CustomGradient"
+        }
+      ],
+      "ContainerType": "Groups.MirrorGroup",
+      "Description": "BUTTONS STATIC GRADIENT"
+    },
+    {
+      "LedContainers": [
+        {
+          "LedCount": 48,
+          "Color": "Black",
+          "BlinkEnabled": false,
+          "StartPosition": 11,
+          "ContainerType": "Flags.YellowFlag",
+          "Description": "BLACKOUT"
+        },
+        {
+          "LedCount": 48,
+          "Color": "Yellow",
+          "BlinkEnabled": true,
+          "BlinkDelay": 300,
+          "StartPosition": 11,
+          "ContainerType": "Flags.YellowFlag",
+          "Description": "Generates a static effect when the Yellow flag is ON copy"
+        }
+      ],
+      "ContainerType": "Base.Group",
+      "Description": "YELLOW FLAGS ROTARIES"
+    },
+    {
+      "LedContainers": [
+        {
+          "LedCount": 10,
+          "Color": "Black",
+          "BlinkEnabled": true,
+          "BlinkDelay": 250,
+          "ContainerType": "Status.SpeedLimiter"
+        }
+      ],
+      "ContainerType": "Base.Group",
+      "Description": "PIT LIMITER"
+    },
+    {
+      "TriggerFormula": {
+        "JSExt": 0,
+        "Interpreter": 1,
+        "Expression": "let time = timespantoseconds($prop('DataCorePlugin.CurrentDateTime'));\r\n\r\nif ($prop('GameRawData.Telemetry.Voltage') > 0 && $prop('GameRawData.Telemetry.CamCameraState') == 80){\r\n\r\n\tif (root.triggerTime == null) {\r\n\t    root.triggerTime = time;\r\n\t    delay = 3;\r\n\t}\r\n\t\r\n\tif (time - root.triggerTime <= delay) {    \r\n\t    return true;\r\n\t} else {\r\n\t\treturn false;\r\n\t}\r\n} else {\r\n\troot.triggerTime = null;\r\n\treturn false;\r\n}\r\n"
+      },
+      "ClearBackgroundWhenActive": true,
+      "LedContainers": [
+        {
+          "TotalWidth": 10,
+          "LedContainers": [
+            {
+              "Delay": 80,
+              "ScrollMode": 0,
+              "LedContainers": [
+                {
+                  "StartColor": "Tomato",
+                  "EndColor": "Cyan",
+                  "MaximumValue": 100.0,
+                  "MinimumValue": 0.0,
+                  "BlinkFormula": {
+                    "Expression": ""
+                  },
+                  "EnabledFormula": {
+                    "Expression": ""
+                  },
+                  "ValueFormula": {
+                    "Expression": "100"
+                  },
+                  "LedCount": 5,
+                  "GradientOnAll": false,
+                  "ClearWhenOut": false,
+                  "UseLedDimming": true,
+                  "BlinkDelay": 500,
+                  "BlinkEnabled": false,
+                  "ContainerType": "CustomGradient"
+                }
+              ],
+              "ContainerType": "Groups.ScrollGroup",
+              "Description": "ANIMATION"
+            }
+          ],
+          "ContainerType": "Groups.MirrorGroup",
+          "Description": "BUTTONS"
+        },
+        {
+          "TotalWidth": 24,
+          "LedContainers": [
+            {
+              "Delay": 80,
+              "ScrollMode": 0,
+              "LedContainers": [
+                {
+                  "StartColor": "Tomato",
+                  "EndColor": "Cyan",
+                  "MaximumValue": 100.0,
+                  "MinimumValue": 0.0,
+                  "BlinkFormula": {
+                    "Expression": ""
+                  },
+                  "EnabledFormula": {
+                    "Expression": ""
+                  },
+                  "ValueFormula": {
+                    "Expression": "100"
+                  },
+                  "LedCount": 12,
+                  "GradientOnAll": false,
+                  "ClearWhenOut": false,
+                  "UseLedDimming": true,
+                  "BlinkDelay": 500,
+                  "BlinkEnabled": false,
+                  "ContainerType": "CustomGradient"
+                }
+              ],
+              "ContainerType": "Groups.ScrollGroup",
+              "Description": "ANIMATION"
+            }
+          ],
+          "StartPosition": 11,
+          "ContainerType": "Groups.MirrorGroup",
+          "Description": "UPPER ROTARIES"
+        },
+        {
+          "TotalWidth": 24,
+          "LedContainers": [
+            {
+              "Delay": 80,
+              "ScrollMode": 0,
+              "LedContainers": [
+                {
+                  "StartColor": "Tomato",
+                  "EndColor": "Cyan",
+                  "MaximumValue": 100.0,
+                  "MinimumValue": 0.0,
+                  "BlinkFormula": {
+                    "Expression": ""
+                  },
+                  "EnabledFormula": {
+                    "Expression": ""
+                  },
+                  "ValueFormula": {
+                    "Expression": "100"
+                  },
+                  "LedCount": 12,
+                  "GradientOnAll": false,
+                  "ClearWhenOut": false,
+                  "UseLedDimming": true,
+                  "BlinkDelay": 500,
+                  "BlinkEnabled": false,
+                  "ContainerType": "CustomGradient"
+                }
+              ],
+              "ContainerType": "Groups.ScrollGroup",
+              "Description": "ANIMATION"
+            }
+          ],
+          "StartPosition": 35,
+          "ContainerType": "Groups.MirrorGroup",
+          "Description": "LOWER ROTARIES"
+        },
+        {
+          "TotalWidth": 15,
+          "LedContainers": [
+            {
+              "Delay": 80,
+              "ScrollMode": 0,
+              "LedContainers": [
+                {
+                  "StartColor": "Cyan",
+                  "EndColor": "Tomato",
+                  "MaximumValue": 100.0,
+                  "MinimumValue": 0.0,
+                  "BlinkFormula": {
+                    "Expression": ""
+                  },
+                  "EnabledFormula": {
+                    "Expression": ""
+                  },
+                  "ValueFormula": {
+                    "Expression": "100"
+                  },
+                  "LedCount": 7,
+                  "GradientOnAll": false,
+                  "ClearWhenOut": false,
+                  "UseLedDimming": true,
+                  "BlinkDelay": 500,
+                  "BlinkEnabled": false,
+                  "ContainerType": "CustomGradient"
+                }
+              ],
+              "ContainerType": "Groups.ScrollGroup",
+              "Description": "ANIMATION"
+            }
+          ],
+          "StartPosition": 59,
+          "ContainerType": "Groups.MirrorGroup",
+          "Description": "REV LIGHTS"
+        }
+      ],
+      "ContainerType": "Groups.CustomConditionalGroup",
+      "Description": "CAR STARTING EFFECT"
+    },
+    {
+      "TriggerFormula": {
+        "Expression": "[GameRawData.Telemetry.Voltage] == 0"
+      },
+      "LedContainers": [
+        {
+          "LedCount": 73,
+          "Color": "Black",
+          "BlinkEnabled": false,
+          "ContainerType": "StaticColor"
+        }
+      ],
+      "ContainerType": "Groups.CustomConditionalGroup",
+      "Description": "CAR OFF BLACKOUT"
+    },
+    {
+      "TriggerFormula": {
+        "JSExt": 0,
+        "Interpreter": 1,
+        "Expression": "if ($prop('GameRawData.Telemetry.IsReplayPlaying') == 1 && $prop('GameRawData.Telemetry.CamCameraState') != 80) {\r\n\treturn true;\r\n} else {\r\n\treturn false;\r\n}"
+      },
+      "LedContainers": [
+        {
+          "LedCount": 73,
+          "Color": "Black",
+          "BlinkEnabled": false,
+          "ContainerType": "StaticColor"
+        }
+      ],
+      "ContainerType": "Groups.CustomConditionalGroup",
+      "Description": "SPECTATE BLACKOUT"
+    }
+  ],
+  "TestLedsGameData": {
+    "GearEx": 1,
+    "FuelMax": 100.0,
+    "RPMSMax": 10000.0,
+    "TurboMax": 3.5,
+    "TurnIndicatorLeftEnabled": false,
+    "TurnIndicatorRightEnabled": false,
+    "SessionBestDeltaEx": 0.0,
+    "AllTimeBestDeltaEx": 0.0,
+    "DRSEnabled": false,
+    "DRSAvailable": false,
+    "MaxRpm": 10000.0,
+    "GameRunning": true,
+    "Brake": 0.0,
+    "GameName": "IRacing",
+    "Fuel": 0.0,
+    "RPMPercent": 0.0,
+    "RPMRedlineReached": false,
+    "SpeedKmh": 0.0,
+    "SpeedMph": 0.0,
+    "Turbo": 0.0,
+    "TurboPercent": 0.0,
+    "Gear": "1",
+    "IsInPitLane": false,
+    "PitLimiterOn": false,
+    "AbsEnabled": false,
+    "AbsActive": false,
+    "TCEnabled": false,
+    "TCActive": false,
+    "LowFuelAlert": false,
+    "SpotterCarLeft": false,
+    "SpotterCarRight": false,
+    "BlackFlag": false,
+    "YellowFlag": false,
+    "WhiteFlag": false,
+    "BlueFlag": false,
+    "GreenFlag": false,
+    "CarModel": "Lamborghini Huracan GT3 EVO",
+    "CarId": null,
+    "CarStartedTime": "2024-03-16T02:09:26.3297086+00:00",
+    "SessionBestDelta": 0.0,
+    "AllTimeBestDelta": 0.0
+  },
+  "UseProfileBrightness": true,
+  "LastLoaded": "2024-01-08T13:59:03.1755201+00:00",
+  "Name": "Deleter's GT Neo - iRacing",
+  "ProfileId": "86f5c2d5-89fe-4232-8109-b252bdb1dfad",
+  "GameCode": "IRacing",
+  "CarChoice": null
+}

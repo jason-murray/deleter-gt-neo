@@ -10854,15 +10854,15 @@
                         {
                           "BlinkDelay": 125,
                           "Segments": [
-                            "2;66.158;Yellow;0;",
-                            "2;72.053;Yellow;0;",
-                            "2;77.632;Yellow;0;",
+                            "1;66.158;Yellow;0;",
+                            "1;72.053;Yellow;0;",
+                            "1;77.632;Yellow;0;",
                             "2;83.032;Red;0;",
                             "5;88.053;Red;0;",
                             "2;83.032;Red;0;",
-                            "2;77.632;Yellow;0;",
-                            "2;72.053;Yellow;0;",
-                            "2;66.158;Yellow;0;"
+                            "1;77.632;Yellow;0;",
+                            "1;72.053;Yellow;0;",
+                            "1;66.158;Yellow;0;"
                           ],
                           "SegmentsCount": 9,
                           "BlinkEnabled": false,
@@ -10910,15 +10910,15 @@
                         {
                           "BlinkDelay": 125,
                           "Segments": [
-                            "2;76;Yellow;0;",
-                            "2;79.737;Yellow;0;",
-                            "2;83.189;Yellow;0;",
+                            "1;76;Yellow;0;",
+                            "1;79.737;Yellow;0;",
+                            "1;83.189;Yellow;0;",
                             "2;86.558;Red;0;",
                             "5;89.716;Red;0;",
                             "2;86.558;Red;0;",
-                            "2;83.189;Yellow;0;",
-                            "2;79.737;Yellow;0;",
-                            "2;76;Yellow;0;",
+                            "1;83.189;Yellow;0;",
+                            "1;79.737;Yellow;0;",
+                            "1;76;Yellow;0;",
                           ],
                           "SegmentsCount": 9,
                           "BlinkEnabled": false,
@@ -10966,15 +10966,15 @@
                         {
                           "BlinkDelay": 125,
                           "Segments": [
-                            "2;82.305;Yellow;0;",
-                            "2;84.516;Yellow;0;",
-                            "2;86.632;Yellow;0;",
+                            "1;82.305;Yellow;0;",
+                            "1;84.516;Yellow;0;",
+                            "1;86.632;Yellow;0;",
                             "2;88.684;Red;0;",
                             "5;90.579;Red;0;",
                             "2;88.684;Red;0;",
-                            "2;86.632;Yellow;0;",
-                            "2;84.516;Yellow;0;",
-                            "2;82.305;Yellow;0;"
+                            "1;86.632;Yellow;0;",
+                            "1;84.516;Yellow;0;",
+                            "1;82.305;Yellow;0;"
                           ],
                           "SegmentsCount": 9,
                           "BlinkEnabled": false,
@@ -11022,15 +11022,15 @@
                         {
                           "BlinkDelay": 125,
                           "Segments": [
-                            "2;86.579;Yellow;0;",
-                            "2;87.842;Yellow;0;",
-                            "2;89.053;Yellow;0;",
+                            "1;86.579;Yellow;0;",
+                            "1;87.842;Yellow;0;",
+                            "1;89.053;Yellow;0;",
                             "2;90.211;Red;0;",
                             "5;91.295;Red;0;",
                             "2;90.211;Red;0;",
-                            "2;89.053;Yellow;0;",
-                            "2;87.842;Yellow;0;",
-                            "2;86.579;Yellow;0;"
+                            "1;89.053;Yellow;0;",
+                            "1;87.842;Yellow;0;",
+                            "1;86.579;Yellow;0;"
                           ],
                           "SegmentsCount": 9,
                           "BlinkEnabled": false,
@@ -11078,15 +11078,15 @@
                         {
                           "BlinkDelay": 125,
                           "Segments": [
-                            "2;93.474;Yellow;0;",
-                            "2;94.158;Yellow;0;",
-                            "2;94.811;Yellow;0;",
+                            "1;93.474;Yellow;0;",
+                            "1;94.158;Yellow;0;",
+                            "1;94.811;Yellow;0;",
                             "2;95.505;Red;0;",
                             "5;96.179;Red;0;",
                             "2;95.505;Red;0;",
-                            "2;94.811;Yellow;0;",
-                            "2;94.158;Yellow;0;",
-                            "2;93.474;Yellow;0;"
+                            "1;94.811;Yellow;0;",
+                            "1;94.158;Yellow;0;",
+                            "1;93.474;Yellow;0;"
                           ],
                           "SegmentsCount": 9,
                           "BlinkEnabled": false,

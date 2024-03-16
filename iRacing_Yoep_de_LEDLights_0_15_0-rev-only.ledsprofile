@@ -7272,17 +7272,16 @@
                     "2;86.154;LawnGreen;1;Blue",
                     "2;92.308;Yellow;1;Blue",
                     "2;98.462;Yellow;1;Blue",
-                    "3;100;LightSalmon;1;Blue",
+                    "3;100;Red;1;Blue",
                     "2;98.462;Yellow;1;Blue",
-                    "1;92.308;Yellow;1;Blue",
-                    "1;86.154;LawnGreen;1;Blue"
+                    "2;92.308;Yellow;1;Blue",
+                    "2;86.154;LawnGreen;1;Blue"
                   ],
                   "SegmentsCount": 7,
                   "BlinkEnabled": false,
                   "RpmMode": 0,
                   "RelativeToRedline": false,
                   "BlinkOnLastGear": false,
-                  "StartPosition": 2,
                   "ContainerType": "RPMSegments",
                   "Description": "Show leds solid color segments based on car RPMs"
                 }
@@ -7298,20 +7297,19 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "1;74.667;LawnGreen;1;Blue",
+                    "2;74.667;LawnGreen;1;Blue",
                     "2;80;Yellow;1;Blue",
                     "2;85.333;Yellow;1;Blue",
-                    "3;90.667;LightSalmon;1;Blue",
+                    "3;90.667;Red;1;Blue",
                     "2;85.333;Yellow;1;Blue",
                     "2;80;Yellow;1;Blue",
-                    "1;74.667;LawnGreen;1;Blue"
+                    "2;74.667;LawnGreen;1;Blue"
                   ],
                   "SegmentsCount": 7,
                   "BlinkEnabled": false,
                   "RpmMode": 0,
                   "RelativeToRedline": false,
                   "BlinkOnLastGear": false,
-                  "StartPosition": 2,
                   "ContainerType": "RPMSegments",
                   "Description": "Show leds solid color segments based on car RPMs"
                 }
@@ -7327,20 +7325,19 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "1;78.667;LawnGreen;1;Blue",
+                    "2;78.667;LawnGreen;1;Blue",
                     "2;82.667;Yellow;1;Blue",
                     "2;86.667;Yellow;1;Blue",
-                    "3;90.667;LightSalmon;1;Blue",
+                    "3;90.667;Red;1;Blue",
                     "2;86.667;Yellow;1;Blue",
                     "2;82.667;Yellow;1;Blue",
-                    "1;78.667;LawnGreen;1;Blue"
+                    "2;78.667;LawnGreen;1;Blue"
                   ],
                   "SegmentsCount": 7,
                   "BlinkEnabled": false,
                   "RpmMode": 0,
                   "RelativeToRedline": false,
                   "BlinkOnLastGear": false,
-                  "StartPosition": 2,
                   "ContainerType": "RPMSegments",
                   "Description": "Show leds solid color segments based on car RPMs"
                 }
@@ -7356,20 +7353,19 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "1;80;LawnGreen;1;Blue",
+                    "2;80;LawnGreen;1;Blue",
                     "2;84;Yellow;1;Blue",
                     "2;88;Yellow;1;Blue",
-                    "3;92;LightSalmon;1;Blue",
+                    "3;92;Red;1;Blue",
                     "2;88;Yellow;1;Blue",
                     "2;84;Yellow;1;Blue",
-                    "1;80;LawnGreen;1;Blue"
+                    "2;80;LawnGreen;1;Blue"
                   ],
                   "SegmentsCount": 7,
                   "BlinkEnabled": false,
                   "RpmMode": 0,
                   "RelativeToRedline": false,
                   "BlinkOnLastGear": false,
-                  "StartPosition": 2,
                   "ContainerType": "RPMSegments",
                   "Description": "Show leds solid color segments based on car RPMs"
                 }
@@ -7385,20 +7381,19 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "1;84.667;LawnGreen;1;Blue",
+                    "2;84.667;LawnGreen;1;Blue",
                     "2;88;Yellow;1;Blue",
                     "2;91.333;Yellow;1;Blue",
-                    "3;97.333;LightSalmon;1;Blue",
+                    "3;97.333;Red;1;Blue",
                     "2;91.333;Yellow;1;Blue",
                     "2;88;Yellow;1;Blue",
-                    "1;84.667;LawnGreen;1;Blue"
+                    "2;84.667;LawnGreen;1;Blue"
                   ],
                   "SegmentsCount": 7,
                   "BlinkEnabled": false,
                   "RpmMode": 0,
                   "RelativeToRedline": false,
                   "BlinkOnLastGear": false,
-                  "StartPosition": 2,
                   "ContainerType": "RPMSegments",
                   "Description": "Show leds solid color segments based on car RPMs"
                 }
@@ -7414,20 +7409,19 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "1;86.667;LawnGreen;1;Blue",
+                    "2;86.667;LawnGreen;1;Blue",
                     "2;89.333;Yellow;1;Blue",
                     "2;92;Yellow;1;Blue",
-                    "3;97.333;LightSalmon;1;Blue",
+                    "3;97.333;Red;1;Blue",
                     "2;92;Yellow;1;Blue",
                     "2;89.333;Yellow;1;Blue",
-                    "1;86.667;LawnGreen;1;Blue"
+                    "2;86.667;LawnGreen;1;Blue"
                   ],
                   "SegmentsCount": 7,
                   "BlinkEnabled": false,
                   "RpmMode": 0,
                   "RelativeToRedline": false,
                   "BlinkOnLastGear": false,
-                  "StartPosition": 2,
                   "ContainerType": "RPMSegments",
                   "Description": "Show leds solid color segments based on car RPMs"
                 }
@@ -7443,26 +7437,38 @@
                 {
                   "BlinkDelay": 125,
                   "Segments": [
-                    "1;92;LawnGreen;1;Blue",
+                    "2;92;LawnGreen;1;Blue",
                     "2;93.333;Yellow;1;Blue",
                     "2;94.667;Yellow;1;Blue",
-                    "3;97.333;LightSalmon;1;Blue",
+                    "3;97.333;Red;1;Blue",
                     "2;94.667;Yellow;1;Blue",
                     "2;93.333;Yellow;1;Blue",
-                    "1;92;LawnGreen;1;Blue"
+                    "2;92;LawnGreen;1;Blue"
                   ],
                   "SegmentsCount": 7,
                   "BlinkEnabled": false,
                   "RpmMode": 0,
                   "RelativeToRedline": false,
                   "BlinkOnLastGear": false,
-                  "StartPosition": 2,
                   "ContainerType": "RPMSegments",
                   "Description": "Show leds solid color segments based on car RPMs"
                 }
               ],
               "ContainerType": "Groups.CustomConditionalGroup",
               "Description": "6th"
+            },
+            {
+              "LedCount": 15,
+              "Color1Alternate": "Black",
+              "Color2Alternate": "Black",
+              "Color1SingleColor": "Black",
+              "Color2SingleColor": "Black",
+              "AlternateDelay": 500,
+              "AlternateEnabled": false,
+              "BlinkColor1Delay": 240,
+              "LimiterBehavior": 0,
+              "Alternate2BlanckBackground": true,
+              "ContainerType": "Status.SpeedLimiterAnimation"
             },
             {
               "LedCount": 3,
@@ -7475,7 +7481,7 @@
               "BlinkColor1Delay": 240,
               "LimiterBehavior": 0,
               "Alternate2BlanckBackground": true,
-              "StartPosition": 5,
+              "StartPosition": 7,
               "ContainerType": "Status.SpeedLimiterAnimation"
             }
           ],

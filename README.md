@@ -1,7 +1,16 @@
 # GT Neo iRacing - Custom Profile & Yoep Rev Lights
 
-### Custom Profile
-Instructions coming soon™️.
+### Custom Profile Features
+- Engine start colour scroll.
+- ABS/TC tracked on rotary LEDs.
+- Fuel gauge rotary.
+- BB rotary.
+- P2P rotary.
+- Rotary flash for yellow flag.
+- Button flash for pit limiter.
+- Engine off/spectate blackout.
+
+There are some settings at the top of the ROTARIES scripted content block for assigning effects to specific rotaries, colours and others.
 
 ### Yoep Rev Lights
 Yoep uses a 3-10-3 layout by default utilising 10 rev lights and two 3 LED status clusters. The GT Neo by Simagic has a 15 LED rev light bar and no status clusters.

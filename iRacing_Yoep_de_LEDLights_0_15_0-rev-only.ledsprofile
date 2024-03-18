@@ -3290,7 +3290,7 @@
           "Color": "Red",
           "BlinkEnabled": true,
           "BlinkDelay": 250,
-          "StartPosition": 13,
+          "StartPosition": 14,
           "ContainerType": "Status.SpeedLimiter",
           "Description": "Generates a static color when the speed limiter is ON copy"
         },

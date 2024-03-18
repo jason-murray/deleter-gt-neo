@@ -24,3 +24,9 @@ Aims:
 - Remain compatible with future Yoep releases.
 
 There are other approaches that could be taken for the status clusters, like flashing the upper 3 buttons on each side of the wheel. I may explore this at some point.
+
+### Install
+
+Your SimHub device page for the GT Neo should look like this:
+
+![install image](https://github.com/jason-murray/yoep-gt-neo/blob/main/readme-img/install.png)

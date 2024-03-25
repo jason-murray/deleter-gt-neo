@@ -36,7 +36,7 @@
     <div class="header">
         <div class="container">
             <h1>Deleter's GT Neo Configurator</h1>
-            <button>Download Profile</button>
+            <button id="download">Download Profile</button>
         </div>
     </div>
 
@@ -166,15 +166,15 @@
             <legend>BB Rotary Config</legend>
 
             <label>LED Ring Start Position</label>
-            <input type="number" name="fuelRotaryOffset" step="1" value="-3">
+            <input type="number" name="bbRotaryOffset" step="1" value="-3">
 
             <div class="chk">
-                <input type="checkbox" name="bbInverted" checked />
+                <input type="checkbox" name="bbInverted" checked="true" />
                 <label>Invert Forward/Backward Clicks</label>
             </div>
 
             <div class="chk">
-                <input type="checkbox" name="bbFill" checked />
+                <input type="checkbox" name="bbFill" checked="true" />
                 <label>Fill Segments Between Mid/Clicks</label>
             </div>
 

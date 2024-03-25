@@ -2,31 +2,234 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Deleter's GT Neo Configurator</title>
-  <meta name="description" content="Deleter's GT Neo Configurator">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deleter's GT Neo Configurator</title>
+    <meta name="description" content="Deleter's GT Neo Configurator">
 
-  <meta property="og:title" content="Deleter's GT Neo Configurator">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+    <link rel="stylesheet" href="static/normalize.css">
+    <link rel="stylesheet" href="static/style.css">
 
-  <!-- <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="static/app.js"></script>
+
+    <meta property="og:title" content="Deleter's GT Neo Configurator">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="">
+
+    <!-- <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="manifest" href="site.webmanifest"> -->
-  <meta name="theme-color" content="#fafafa">
+    <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <h1>Deleter's GT Neo Configurator</h1>
-  <script src="js/app.js"></script>
+    <div class="header">
+        <div class="container">
+            <h1>Deleter's GT Neo Configurator</h1>
+            <button>Download Profile</button>
+        </div>
+    </div>
 
+    <div class="container content">
+        <div id="rotary-features">
+            <fieldset class="rotary-feature">
+                <legend>Rotary 1</legend>
+
+                <div>
+                    <input type="radio" name="rotaryFeature[0]" value="tcRotary" checked />
+                    <label>TC Level</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="rotaryFeature[0]" value="absRotary" />
+                    <label>ABS Level</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="rotaryFeature[0]" value="fuelRotary" />
+                    <label>Fuel Gauge</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="rotaryFeature[0]" value="p2pRotary" />
+                    <label>P2P</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="rotaryFeature[0]" value="bbRotary" />
+                    <label>Brake Bias</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="rotaryFeature[0]" value="false" />
+                    <label>None</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <fieldset class="feature-config">
+            <legend>General</legend>
+            <div>
+                <label>Blinker Time (Seconds)</label>
+                <input type="number" name="flashTime" step="0.1" value="0.5">
+            </div>
+        </fieldset>
+
+        <fieldset class="feature-config">
+            <legend>TC Rotary Config</legend>
+
+            <label>LED Ring Start Position</label>
+            <input type="number" name="tcRotaryOffset" step="1" value="-3">
+
+            <div class="colours">
+                <div>
+                    <label>Active Level</label>
+                    <input type="color" name="tcLevelC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Background</label>
+                    <input type="color" name="tcBgC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Off</label>
+                    <input type="color" name="tcOffC" value="#e66465" />
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="feature-config">
+            <legend>ABS Rotary Config</legend>
+
+            <label>LED Ring Start Position</label>
+            <input type="number" name="absRotaryOffset" step="1" value="-3">
+
+            <div class="colours">
+                <div>
+                    <label>Active Level</label>
+                    <input type="color" name="absLevelC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Background</label>
+                    <input type="color" name="absBgC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Off</label>
+                    <input type="color" name="absOffC" value="#e66465" />
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="feature-config">
+            <legend>Fuel Rotary Config</legend>
+
+            <label>LED Ring Start Position</label>
+            <input type="number" name="fuelRotaryOffset" step="1" value="-3">
+
+            <div class="colours">
+                <div>
+                    <label>Unfilled Segment</label>
+                    <input type="color" name="fuelBgC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Filled Segment</label>
+                    <input type="color" name="fuelSeg" value="#e66465" />
+                </div>
+                <div>
+                    <label>Last Segment Inactive</label>
+                    <input type="color" name="fuelLastSegBgC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Last Segment Active</label>
+                    <input type="color" name="fuelLastSegC" value="#e66465" />
+                </div>
+                <div>
+                    <label>In Lap Flash</label>
+                    <input type="color" name="fuelFlashC" value="#e66465" />
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="feature-config">
+            <legend>BB Rotary Config</legend>
+
+            <label>LED Ring Start Position</label>
+            <input type="number" name="fuelRotaryOffset" step="1" value="-3">
+
+            <div class="chk">
+                <input type="checkbox" name="bbInverted" checked />
+                <label>Invert Forward/Backward Clicks</label>
+            </div>
+
+            <div class="chk">
+                <input type="checkbox" name="bbFill" checked />
+                <label>Fill Segments Between Mid/Clicks</label>
+            </div>
+
+            <div class="colours">
+                <div>
+                    <label>Forward Segment</label>
+                    <input type="color" name="bbLevelFC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Backward Segment</label>
+                    <input type="color" name="bbLevelBC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Background Segments</label>
+                    <input type="color" name="bbBgC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Active Middle Segment</label>
+                    <input type="color" name="bbMiddleC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Inactive Middle Segment</label>
+                    <input type="color" name="bbMiddleBgC" value="#e66465" />
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="feature-config">
+            <legend>P2P Rotary Config</legend>
+
+            <label>LED Ring Start Position</label>
+            <input type="number" name="p2pRotaryOffset" step="1" value="-3">
+
+            <div class="colours">
+                <div>
+                    <label>Available Charges</label>
+                    <input type="color" name="p2pLevelC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Background</label>
+                    <input type="color" name="p2pBgC" value="#e66465" />
+                </div>
+                <div>
+                    <label>Activated Flash</label>
+                    <input type="color" name="p2pActivated" value="#e66465" />
+                </div>
+                <div>
+                    <label>None Left</label>
+                    <input type="color" name="p2pNoneC" value="#e66465" />
+                </div>
+            </div>
+
+        </fieldset>
+    </div>
 </body>
 
 </html>

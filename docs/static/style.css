@@ -1,0 +1,99 @@
+html {
+    font-size: 18px;
+    background-color: #222;
+    color: #eaeaea;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, strong, b {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+fieldset {
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+fieldset > input {
+    margin-bottom: 25px;
+}
+
+.rotary-feature label,
+.chk label {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.chk {
+    margin-bottom: 25px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #000;
+    height:90px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #009e1a;
+    color: #eaeaea;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content {
+    padding-top: 125px;
+}
+
+#rotary-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#rotary-features fieldset {
+    flex-basis: 45%;
+}
+
+#rotary-features div {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.colours {
+    display: flex;
+}
+
+.colours div {
+    margin-right: 25px;
+}

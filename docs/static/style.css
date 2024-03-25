@@ -11,6 +11,10 @@ h1, h2, strong, b {
     font-weight: 700;
 }
 
+h1 {
+    margin-bottom: 0;
+}
+
 em {
     font-style: italic;
 }
@@ -31,6 +35,11 @@ fieldset > input {
     margin-bottom: 25px;
 }
 
+.tagline {
+    margin-top: 0;
+    color: #777;
+}
+
 .rotary-feature label,
 .chk label {
     display: inline;
@@ -45,7 +54,7 @@ fieldset > input {
     position: fixed;
     width: 100%;
     background-color: #000;
-    height:90px;
+    height:115px;
 }
 
 .container {
@@ -70,7 +79,11 @@ button {
 }
 
 .content {
-    padding-top: 125px;
+    padding-top: 115px;
+}
+
+.info {
+    margin-bottom: 25px;
 }
 
 #rotary-features {

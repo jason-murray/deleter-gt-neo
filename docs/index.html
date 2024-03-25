@@ -35,24 +35,33 @@
 
     <div class="header">
         <div class="container">
-            <h1>Deleter's GT Neo Configurator</h1>
-            <button id="download">Download Profile</button>
+            <div>
+                <h1>Deleter's GT Neo Configurator</h1>
+                <p class="tagline">A SimHub LED profile for iRacing.</p>
+            </div>
+            <button id="download">Download Profile (v8)</button>
         </div>
     </div>
 
     <div class="container content">
+        <p class="info">Your settings are saved in the URL when you make changes, you can bookmark it to save them for future updates.</p>
         <div id="rotary-features">
             <fieldset class="rotary-feature">
-                <legend>Rotary 1</legend>
+                <legend>Top Left Rotary</legend>
 
                 <div>
                     <input type="radio" name="rotaryFeature[0]" value="tcRotary" checked />
-                    <label>TC Level</label>
+                    <label>TC Mode</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="rotaryFeature[0]" value="tc2Rotary" checked />
+                    <label>TC2 Mode</label>
                 </div>
 
                 <div>
                     <input type="radio" name="rotaryFeature[0]" value="absRotary" />
-                    <label>ABS Level</label>
+                    <label>ABS Mode</label>
                 </div>
 
                 <div>
@@ -89,7 +98,7 @@
             <legend>TC Rotary Config</legend>
 
             <label>LED Ring Start Position</label>
-            <input type="number" name="tcRotaryOffset" step="1" value="-3">
+            <input type="number" name="tcRotaryOffset" step="1" value="-4">
 
             <div class="colours">
                 <div>
@@ -109,10 +118,33 @@
         </fieldset>
 
         <fieldset class="feature-config">
+            <legend>TC2 Rotary Config</legend>
+
+            <label>LED Ring Start Position</label>
+            <input type="number" name="tc2RotaryOffset" step="1" value="-4">
+
+            <div class="colours">
+                <div>
+                    <label>Active Level</label>
+                    <input type="color" name="tc2LevelC" value="#fc9803" />
+                </div>
+                <div>
+                    <label>Background</label>
+                    <input type="color" name="tc2BgC" value="#320000" />
+                </div>
+                <div>
+                    <label>Off</label>
+                    <input type="color" name="tc2OffC" value="#ff0000" />
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="feature-config">
             <legend>ABS Rotary Config</legend>
 
             <label>LED Ring Start Position</label>
-            <input type="number" name="absRotaryOffset" step="1" value="-3">
+            <input type="number" name="absRotaryOffset" step="1" value="-4">
 
             <div class="colours">
                 <div>
@@ -145,7 +177,7 @@
             <div class="colours">
                 <div>
                     <label>Unfilled Segment</label>
-                    <input type="color" name="fuelBgC" value="#004d00" />
+                    <input type="color" name="fuelBgC" value="#003200" />
                 </div>
                 <div>
                     <label>Filled Segment</label>
@@ -153,7 +185,7 @@
                 </div>
                 <div>
                     <label>Last Segment Inactive</label>
-                    <input type="color" name="fuelLastSegBgC" value="#4d0000" />
+                    <input type="color" name="fuelLastSegBgC" value="#320000" />
                 </div>
                 <div>
                     <label>Last Segment Active</label>
@@ -194,7 +226,7 @@
                 </div>
                 <div>
                     <label>Background Segments</label>
-                    <input type="color" name="bbBgC" value="#4d4d4d" />
+                    <input type="color" name="bbBgC" value="#323232" />
                 </div>
                 <div>
                     <label>Active Middle Segment</label>
@@ -202,7 +234,7 @@
                 </div>
                 <div>
                     <label>Inactive Middle Segment</label>
-                    <input type="color" name="bbMiddleBgC" value="#00004d" />
+                    <input type="color" name="bbMiddleBgC" value="#000032" />
                 </div>
             </div>
 

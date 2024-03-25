@@ -96,3 +96,14 @@ button {
 .colours div {
     margin-right: 25px;
 }
+
+.footer {
+    color: #444;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer a:visited,
+.footer a:link {
+    color: #444;
+}

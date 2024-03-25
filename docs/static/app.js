@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // change name attribute on inputs
         for (let j = 0; j < inputs.length; j++) {
             inputs[j].setAttribute("name", inputs[j].getAttribute("name").slice(0, -2) + (i + 1) + "]");
+            inputs[j].checked = false;
         }
 
         let title = rotaryClone.getElementsByTagName("legend")[0];
@@ -16,14 +17,27 @@ document.addEventListener("DOMContentLoaded", function () {
         // change title
         title.innerHTML = title.innerHTML.slice(0, -1) + (i + 2);
 
+        // default selections
+        switch (i) {
+            case 0:
+                inputs[1].checked = true;
+                break;
+            case 1:
+                inputs[4].checked = true;
+                break;
+            case 2:
+                inputs[2].checked = true;
+                break;
+        }
+
         document.getElementById("rotary-features").appendChild(rotaryClone);
+
     }
 
     // Input Listeners
     let inputs = document.querySelectorAll('input');
 
     for (var i = 0, len = inputs.length; i < len; i++) {
-        // Listen for input event on numInput.
         inputs[i].addEventListener('input', function () {
             updateUrlSettingsString();
         }, false);
@@ -46,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        //array to string
+        // array to base64 string
         settingsStringb64 = encodeURIComponent(btoa(JSON.stringify({ settings })));
 
         // update url
@@ -56,19 +70,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load settings from URL
     let settingsStringb64 = window.location.search.substring(1);
 
-    let loadedSettings = JSON.parse(atob(decodeURIComponent(settingsStringb64)));
+    if (settingsStringb64.length > 0) {
+        let loadedSettings = JSON.parse(atob(decodeURIComponent(settingsStringb64)));
 
-    for (var i = 0, len = inputs.length; i < len; i++) {
-        // Listen for input event on numInput.
-        if (loadedSettings.settings[inputs[i].name] != null) {
-            if (inputs[i].type === 'checkbox') {
-                inputs[i].checked = loadedSettings.settings[inputs[i].name];
-            } else if (inputs[i].type === 'radio') {
-                if (inputs[i].value === loadedSettings.settings[inputs[i].name]) {
-                    inputs[i].checked = true;
+        for (var i = 0, len = inputs.length; i < len; i++) {
+            if (loadedSettings.settings[inputs[i].name] != null) {
+                if (inputs[i].type === 'checkbox') {
+                    inputs[i].checked = loadedSettings.settings[inputs[i].name];
+                } else if (inputs[i].type === 'radio') {
+                    if (inputs[i].value === loadedSettings.settings[inputs[i].name]) {
+                        inputs[i].checked = true;
+                    }
+                } else {
+                    inputs[i].value = loadedSettings.settings[inputs[i].name];
                 }
-            } else {
-                inputs[i].value = loadedSettings.settings[inputs[i].name];
             }
         }
     }
@@ -78,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.appendChild(a);
         a.style = "display: none";
         return function (data, fileName) {
-            var blob = new Blob([data], {type: "octet/stream"}),
+            var blob = new Blob([data], { type: "octet/stream" }),
                 url = window.URL.createObjectURL(blob);
             a.href = url;
             a.download = fileName;
@@ -89,41 +104,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // download button click listener
     document.getElementById("download").addEventListener("click", function () {
-        
+
         fetch("https://raw.githubusercontent.com/jason-murray/deleter-gt-neo/main/Deleters_GT_Neo_iRacing.ledsprofile")
             .then((res) => res.text())
             .then((text) => {
-                // do something with "text"
                 let settingsStart = text.substring(0, text.indexOf("// --- Global Config ---\\r\\n"));
                 let settingsEnd = text.substring(text.indexOf("// END CONFIG"));
 
                 let inputs = document.querySelectorAll('input');
                 let settings = "";
-                let preSettings = "let rotaries = [";
-        
+                let preSettings = "// Settings URL: " + window.location.href + "\\r\\nlet rotaries = [";
+
                 for (var i = 0, len = inputs.length; i < len; i++) {
                     if (inputs[i].type === 'checkbox') {
-                        settings += "let " + inputs[i].name + " = " + inputs[i].checked + ";";
+                        settings += "let " + inputs[i].name + " = " + inputs[i].checked + ";\\r\\n";
                     } else if (inputs[i].type === 'color') {
-                        settings += "let " + inputs[i].name + " = '" + inputs[i].value + "';";
+                        settings += "let " + inputs[i].name + " = '" + inputs[i].value + "';\\r\\n";
                     } else if (inputs[i].type === 'radio') {
                         if (inputs[i].checked === true) {
                             preSettings += inputs[i].value + ",";
                         }
                     } else {
-                        settings += "let " + inputs[i].name + " = " + inputs[i].value + ";";
+                        settings += "let " + inputs[i].name + " = " + inputs[i].value + ";\\r\\n";
                     }
                 }
 
-                preSettings = preSettings.slice(0, -1) + "];";
-                
+                preSettings = preSettings.slice(0, -1) + "];\\r\\n";
+
                 console.log(settingsStart + preSettings + settings + settingsEnd);
 
                 saveData(settingsStart + preSettings + settings + settingsEnd, "Deleters_GT_Neo_iRacing.ledsprofile");
             })
             .catch((e) => console.error(e));
-
-
 
     });
 });

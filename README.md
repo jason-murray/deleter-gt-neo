@@ -10,6 +10,10 @@
 - Button flash for pit limiter.
 - Engine off/spectate blackout.
 
+There is a configurator for the profile [here.](https://jason-murray.github.io/deleter-gt-neo/)
+
+-- OR --
+
 There are some settings at the top of the ROTARIES scripted content block for assigning effects to specific rotaries, colours and others.
 
 ### Yoep Rev Lights

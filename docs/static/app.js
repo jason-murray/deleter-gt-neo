@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (i) {
             case 0:
                 title.innerHTML = 'Top Right Rotary';
-                inputs[1].checked = true;
+                inputs[2].checked = true;
                 break;
             case 1:
                 title.innerHTML = 'Bottom Left Rotary';
-                inputs[4].checked = true;
+                inputs[5].checked = true;
                 break;
             case 2:
                 title.innerHTML = 'Bottom Right Rotary';
-                inputs[2].checked = true;
+                inputs[3].checked = true;
                 break;
         }
 

@@ -1,0 +1,70 @@
+{
+  "EmbeddedJavascript": null,
+  "GlobalBrightness": 100.0,
+  "GlobalBrightnessPreset": {
+    "CurrentMode": 0,
+    "Brightness": 100.0,
+    "BrightnessSettings": {}
+  },
+  "LedContainers": [
+    {
+      "ContentFormula": {
+        "JSExt": 0,
+        "Interpreter": 1,
+        "Expression": "// RPM Leds as tank indicator\r\n\r\n\r\nlet flashTime = 0.5;\r\nlet fuelBgC = '#003200';\r\nlet fuelSeg = '#00ff00';\r\nlet fuelLastSegBgC = '#320000';\r\nlet fuelLastSegC = '#ff0000';\r\nlet fuelFlashC = '#ff0000';\r\nlet numberOfLeds = 15\r\n\r\n// -- Blinker Loop --\r\n\r\nlet time = timespantoseconds($prop('DataCorePlugin.CurrentDateTime'));\r\n    \r\nif (root.toggle == null) {\r\n    root.toggle = false;\r\n    root.triggerTime = time;\r\n    delay = flashTime;\r\n}    \r\nif (time - root.triggerTime >= delay) {    \r\n    root.toggle = !root.toggle;\r\n    root.triggerTime = time;\r\n}\r\n\r\n// -- End Blinker Loop\r\n\r\n// Set up light array.\r\nlet fuelLeds = Array(numberOfLeds).fill(fuelBgC);\r\n\r\n// Calculate segments from maximum tank size for session. E.g. 50L for GT3 Sprint\r\nlet sessionTankLitres = $prop('GameRawData.SessionData.DriverInfo.DriverCarFuelMaxLtr') * $prop('GameRawData.SessionData.DriverInfo.DriverCarMaxFuelPct');\r\n\r\n// Fix for out of session values\r\nif (sessionTankLitres == 0) {\r\n\tsessionTankLitres = 1;\r\n}\r\n\r\n// Divide session tank in to LED segments\r\nlet tankSegments = sessionTankLitres / numberOfLeds;\r\n\r\n// Convert current fuel in to LED segments\r\ntankSegments = $prop('Fuel') / tankSegments;\r\n\r\n// Round filled segments to whole number and fill LED array\r\nlet filledSegments = Array(Math.round(tankSegments)).fill(fuelSeg);\r\n\r\n// Remove first segment\r\nfilledSegments.shift();\r\n\r\nfuelLeds.splice(1, filledSegments.length, ...filledSegments);\r\n\r\n// Idle low fuel.\r\nfuelLeds.splice(0, 1, fuelLastSegBgC);\r\n\r\n// Check if in lap\r\nif ($prop('DataCorePlugin.Computed.Fuel_RemainingLaps') < 2) {\r\n\tif (root.inLap == 999 || root.inLap == null) {\r\n\t\troot.inLap = $prop('CurrentLap') + 1;\r\n\t}\r\n} else {\r\n\troot.inLap = 999;\r\n}\r\n\r\n// Fuel blinkers\r\nif (root.toggle) {\r\n\r\n\t// No green segments, blink red segment\r\n\tif (Math.round(tankSegments) < 2) {\r\n\t\tfuelLeds.splice(0, 1, fuelLastSegC);\r\n\t}\r\n\t// Must pit this lap, blink all segments red\r\n\tif ($prop('CurrentLap') >= root.inLap && $prop('DataCorePlugin.Computed.Fuel_RemainingLaps') != 0) {\r\n\t\r\n\t\tlet boxLapSegments = Array(numberOfLeds).fill(fuelFlashC);\r\n\r\n\t\tfuelLeds.splice(0, numberOfLeds, ...boxLapSegments);\r\n\t}\r\n}\r\n\r\nreturn fuelLeds;\r\n"
+      },
+      "LedCount": 15,
+      "ContainerType": "ScriptedContent",
+      "Description": "Show the current tank status in the RPM bar"
+    }
+  ],
+  "TestLedsGameData": {
+    "GearEx": 0,
+    "FuelMax": 100.0,
+    "RPMSMax": 10000.0,
+    "TurboMax": 3.5,
+    "TurnIndicatorLeftEnabled": false,
+    "TurnIndicatorRightEnabled": false,
+    "SessionBestDeltaEx": 0.0,
+    "AllTimeBestDeltaEx": 0.0,
+    "DRSEnabled": false,
+    "DRSAvailable": false,
+    "MaxRpm": 10000.0,
+    "GameRunning": false,
+    "Brake": 0.0,
+    "GameName": "IRacing",
+    "Fuel": 0.0,
+    "RPMPercent": 0.0,
+    "RPMRedlineReached": false,
+    "SpeedKmh": 0.0,
+    "SpeedMph": 0.0,
+    "Turbo": 0.0,
+    "TurboPercent": 0.0,
+    "Gear": "N",
+    "IsInPitLane": false,
+    "PitLimiterOn": false,
+    "AbsEnabled": false,
+    "AbsActive": false,
+    "TCEnabled": false,
+    "TCActive": false,
+    "LowFuelAlert": false,
+    "SpotterCarLeft": false,
+    "SpotterCarRight": false,
+    "BlackFlag": false,
+    "YellowFlag": false,
+    "WhiteFlag": false,
+    "BlueFlag": false,
+    "GreenFlag": false,
+    "CarModel": null,
+    "CarId": null,
+    "CarStartedTime": "0001-01-01T00:00:00",
+    "SessionBestDelta": 0.0,
+    "AllTimeBestDelta": 0.0
+  },
+  "UseProfileBrightness": false,
+  "LastLoaded": "0001-01-01T00:00:00",
+  "Name": "Tank Status Indicator Rev lights GT Neo - iRacing(v1)",
+  "ProfileId": "e30d55eb-24f6-4f3a-8a6f-6bcbe21f0f9d",
+  "GameCode": "IRacing",
+  "CarChoice": null
+}

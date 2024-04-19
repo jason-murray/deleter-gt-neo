@@ -29,6 +29,9 @@ Aims:
 
 There are other approaches that could be taken for the status clusters, like flashing the upper 3 buttons on each side of the wheel. I may explore this at some point.
 
+### Tank Status Indicator Rev Lights
+If you already have a dedicated RPM led bar and do not need the RPM bar of the wheel you can instad use this profile to show the status of your car's tank. It works the same as the rotary tank indicator just with more leds.
+
 ### Install
 
 Your SimHub device page for the GT Neo should look like this:

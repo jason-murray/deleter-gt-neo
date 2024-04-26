@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 let inputs = document.querySelectorAll('input');
                 let settings = "";
-                let preSettings = "// Settings URL: " + window.location.href + "\\r\\nlet rotaries = [";
+                let preSettings = "// Settings URL: " + window.location.href + "\\r\\n\\r\\nlet rotaries = [";
 
                 for (var i = 0, len = inputs.length; i < len; i++) {
                     if (inputs[i].type === 'checkbox') {

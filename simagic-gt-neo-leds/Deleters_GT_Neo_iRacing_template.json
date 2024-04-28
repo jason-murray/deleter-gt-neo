@@ -92,8 +92,8 @@
       "TotalWidth": 10,
       "LedContainers": [
         {
-          "StartColor": "Indigo",
-          "EndColor": "255, 111, 0",
+          "StartColor": "BTN-START",
+          "EndColor": "BTN-END",
           "MaximumValue": 100.0,
           "MinimumValue": 0.0,
           "BlinkFormula": {
@@ -187,8 +187,8 @@
               "ScrollMode": 0,
               "LedContainers": [
                 {
-                  "StartColor": "Tomato",
-                  "EndColor": "Cyan",
+                  "StartColor": "IGN-START",
+                  "EndColor": "IGN-END",
                   "MaximumValue": 100.0,
                   "MinimumValue": 0.0,
                   "BlinkFormula": {
@@ -224,8 +224,8 @@
               "ScrollMode": 0,
               "LedContainers": [
                 {
-                  "StartColor": "Tomato",
-                  "EndColor": "Cyan",
+                  "StartColor": "IGN-START",
+                  "EndColor": "IGN-END",
                   "MaximumValue": 100.0,
                   "MinimumValue": 0.0,
                   "BlinkFormula": {
@@ -262,8 +262,8 @@
               "ScrollMode": 0,
               "LedContainers": [
                 {
-                  "StartColor": "Tomato",
-                  "EndColor": "Cyan",
+                  "StartColor": "IGN-START",
+                  "EndColor": "IGN-END",
                   "MaximumValue": 100.0,
                   "MinimumValue": 0.0,
                   "BlinkFormula": {
@@ -300,8 +300,8 @@
               "ScrollMode": 0,
               "LedContainers": [
                 {
-                  "StartColor": "Cyan",
-                  "EndColor": "Tomato",
+                  "StartColor": "IGN-END",
+                  "EndColor": "IGN-START",
                   "MaximumValue": 100.0,
                   "MinimumValue": 0.0,
                   "BlinkFormula": {
@@ -391,7 +391,7 @@
   },
   "UseProfileBrightness": true,
   "LastLoaded": "2024-01-08T13:59:03.1755201+00:00",
-  "Name": "Deleter's GT Neo - iRacing (v8)",
+  "Name": "Deleter's GT Neo - iRacing (v9)",
   "ProfileId": "86f5c2d5-89fe-4232-8109-b252bdb1dfad",
   "GameCode": "IRacing",
   "CarChoice": null

@@ -133,7 +133,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 console.log(settingsStart + preSettings + settings + settingsEnd);
 
-                saveData(settingsStart + preSettings + settings + settingsEnd, "Deleters_GT_Neo_iRacing.ledsprofile");
+                let fullSettings = settingsStart + preSettings + settings + settingsEnd;
+
+                let templateInputs = document.getElementsByClassName('template-var');
+
+                for (var i = 0, len = templateInputs.length; i < len; i++) {
+                    if (templateInputs[i].type === 'checkbox') {
+                        fullSettings = fullSettings.replace(templateInputs[i].name, templateInputs[i].checked);
+                    } else if (templateInputs[i].type === 'color') {
+                        fullSettings = fullSettings.replace(templateInputs[i].name, templateInputs[i].value);
+                    }
+                }
+
+                saveData(fullSettings, "Deleters_GT_Neo_iRacing.ledsprofile");
             })
             .catch((e) => console.error(e));
 

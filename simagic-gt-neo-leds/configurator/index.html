@@ -39,12 +39,48 @@
                 <h1>Deleter's GT Neo Configurator</h1>
                 <p class="tagline">A SimHub LED profile for iRacing.</p>
             </div>
-            <button id="download">Download Profile (v8)</button>
+            <button id="download">Download Profile (v9)</button>
         </div>
     </div>
 
     <div class="container content">
         <p class="info">Your settings are saved in the URL when you make changes, you can bookmark it to save them for future updates.</p>
+
+        <fieldset class="feature-config">
+            <legend>General</legend>
+
+            <div class="colours">
+                <div>
+                    <label>Button Gradient Top</label>
+                    <input class="template-var" type="color" name="BTN-START" value="#4B0082" />
+                </div>
+                <div>
+                    <label>Button Gradient Bottom</label>
+                    <input class="template-var" type="color" name="BTN-END" value="#FF6F00" />
+                </div>
+            </div>
+            <br>
+            <div class="colours">
+                <div>
+                    <label>Engine Start Colour 1</label>
+                    <input class="template-var" type="color" name="IGN-START" value="#FF6347" />
+                </div>
+                <div>
+                    <label>Engine Start Colour 2</label>
+                    <input class="template-var" type="color" name="IGN-END" value="#00FFFF" />
+                </div>
+            </div>
+            <br>
+
+            <!-- <div class="chk">
+                <input class="template-var" type="checkbox" name="KNIGHT-RIDER" />
+                <label>Knight Rider effect when wheel off</label>
+            </div> -->
+
+            <label>Blinker Time (Seconds)</label>
+            <input class="config-var" type="number" name="flashTime" step="0.1" value="0.5">
+        </fieldset>
+
         <div id="rotary-features">
             <fieldset class="rotary-feature">
                 <legend>Top Left Rotary</legend>
@@ -95,14 +131,6 @@
                 </div>
             </fieldset>
         </div>
-
-        <fieldset class="feature-config">
-            <legend>General</legend>
-            <div>
-                <label>Blinker Time (Seconds)</label>
-                <input class="config-var" type="number" name="flashTime" step="0.1" value="0.5">
-            </div>
-        </fieldset>
 
         <fieldset class="feature-config">
             <legend>TC Config</legend>

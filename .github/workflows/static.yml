@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'configurator'
+          path: 'simagic-gt-neo-leds/configurator'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

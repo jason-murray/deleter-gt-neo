@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // download button click listener
     document.getElementById("download").addEventListener("click", function () {
 
-        fetch("https://raw.githubusercontent.com/jason-murray/deleter-gt-neo/main/Deleters_GT_Neo_iRacing.ledsprofile")
+        fetch("https://raw.githubusercontent.com/jason-murray/deleter-gt-neo/main/simagic-gt-neo-leds/Deleters_GT_Neo_iRacing_template.json")
             .then((res) => res.text())
             .then((text) => {
                 let settingsStart = text.substring(0, text.indexOf("// --- Global Config ---\\r\\n"));

@@ -139,9 +139,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 for (var i = 0, len = templateInputs.length; i < len; i++) {
                     if (templateInputs[i].type === 'checkbox') {
-                        fullSettings = fullSettings.replace(templateInputs[i].name, templateInputs[i].checked);
+                        fullSettings = fullSettings.replaceAll(templateInputs[i].name, templateInputs[i].checked);
                     } else if (templateInputs[i].type === 'color') {
-                        fullSettings = fullSettings.replace(templateInputs[i].name, templateInputs[i].value);
+                        fullSettings = fullSettings.replaceAll(templateInputs[i].name, templateInputs[i].value);
                     }
                 }
 

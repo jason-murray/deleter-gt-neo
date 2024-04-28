@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let settingsStart = text.substring(0, text.indexOf("// --- Global Config ---\\r\\n"));
                 let settingsEnd = text.substring(text.indexOf("// END CONFIG"));
 
-                let inputs = document.querySelectorAll('input');
+                let inputs = document.getElementsByClassName('config-var');
                 let settings = "";
                 let preSettings = "// --- Global Config ---\\r\\n// Settings URL: " + window.location.href + "\\r\\n\\r\\nlet rotaries = [";
 

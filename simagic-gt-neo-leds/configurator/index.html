@@ -50,37 +50,37 @@
                 <legend>Top Left Rotary</legend>
 
                 <div>
-                    <input type="radio" name="rotaryFeature[0]" value="tcRotary" checked />
+                    <input class="config-var" type="radio" name="rotaryFeature[0]" value="tcRotary" checked />
                     <label>TC Mode</label>
                 </div>
 
                 <div>
-                    <input type="radio" name="rotaryFeature[0]" value="tc2Rotary" />
+                    <input class="config-var" type="radio" name="rotaryFeature[0]" value="tc2Rotary" />
                     <label>TC2 Mode</label>
                 </div>
 
                 <div>
-                    <input type="radio" name="rotaryFeature[0]" value="absRotary" />
+                    <input class="config-var" type="radio" name="rotaryFeature[0]" value="absRotary" />
                     <label>ABS Mode</label>
                 </div>
 
                 <div>
-                    <input type="radio" name="rotaryFeature[0]" value="fuelRotary" />
+                    <input class="config-var" type="radio" name="rotaryFeature[0]" value="fuelRotary" />
                     <label>Fuel Gauge</label>
                 </div>
 
                 <div>
-                    <input type="radio" name="rotaryFeature[0]" value="p2pRotary" />
+                    <input class="config-var" type="radio" name="rotaryFeature[0]" value="p2pRotary" />
                     <label>P2P</label>
                 </div>
 
                 <div>
-                    <input type="radio" name="rotaryFeature[0]" value="bbRotary" />
+                    <input class="config-var" type="radio" name="rotaryFeature[0]" value="bbRotary" />
                     <label>Brake Bias</label>
                 </div>
 
                 <div>
-                    <input type="radio" name="rotaryFeature[0]" value="false" />
+                    <input class="config-var" type="radio" name="rotaryFeature[0]" value="false" />
                     <label>None</label>
                 </div>
             </fieldset>
@@ -90,7 +90,7 @@
             <legend>General</legend>
             <div>
                 <label>Blinker Time (Seconds)</label>
-                <input type="number" name="flashTime" step="0.1" value="0.5">
+                <input class="config-var" type="number" name="flashTime" step="0.1" value="0.5">
             </div>
         </fieldset>
 
@@ -98,20 +98,20 @@
             <legend>TC Rotary Config</legend>
 
             <label>LED Ring Start Position</label>
-            <input type="number" name="tcRotaryOffset" step="1" value="-4">
+            <input class="config-var" type="number" name="tcRotaryOffset" step="1" value="-4">
 
             <div class="colours">
                 <div>
                     <label>Active Level</label>
-                    <input type="color" name="tcLevelC" value="#fc9803" />
+                    <input class="config-var" type="color" name="tcLevelC" value="#fc9803" />
                 </div>
                 <div>
                     <label>Background</label>
-                    <input type="color" name="tcBgC" value="#013d6a" />
+                    <input class="config-var" type="color" name="tcBgC" value="#013d6a" />
                 </div>
                 <div>
                     <label>Off</label>
-                    <input type="color" name="tcOffC" value="#ff0000" />
+                    <input class="config-var" type="color" name="tcOffC" value="#ff0000" />
                 </div>
             </div>
 
@@ -121,20 +121,20 @@
             <legend>TC2 Rotary Config</legend>
 
             <label>LED Ring Start Position</label>
-            <input type="number" name="tc2RotaryOffset" step="1" value="-4">
+            <input class="config-var" type="number" name="tc2RotaryOffset" step="1" value="-4">
 
             <div class="colours">
                 <div>
                     <label>Active Level</label>
-                    <input type="color" name="tc2LevelC" value="#fc9803" />
+                    <input class="config-var" type="color" name="tc2LevelC" value="#fc9803" />
                 </div>
                 <div>
                     <label>Background</label>
-                    <input type="color" name="tc2BgC" value="#320000" />
+                    <input class="config-var" type="color" name="tc2BgC" value="#320000" />
                 </div>
                 <div>
                     <label>Off</label>
-                    <input type="color" name="tc2OffC" value="#ff0000" />
+                    <input class="config-var" type="color" name="tc2OffC" value="#ff0000" />
                 </div>
             </div>
 
@@ -144,20 +144,20 @@
             <legend>ABS Rotary Config</legend>
 
             <label>LED Ring Start Position</label>
-            <input type="number" name="absRotaryOffset" step="1" value="-4">
+            <input class="config-var" type="number" name="absRotaryOffset" step="1" value="-4">
 
             <div class="colours">
                 <div>
                     <label>Active Level</label>
-                    <input type="color" name="absLevelC" value="#00ff00" />
+                    <input class="config-var" type="color" name="absLevelC" value="#00ff00" />
                 </div>
                 <div>
                     <label>Background</label>
-                    <input type="color" name="absBgC" value="#300160" />
+                    <input class="config-var" type="color" name="absBgC" value="#300160" />
                 </div>
                 <div>
                     <label>Off</label>
-                    <input type="color" name="absOffC" value="#ff0000" />
+                    <input class="config-var" type="color" name="absOffC" value="#ff0000" />
                 </div>
             </div>
 
@@ -167,33 +167,33 @@
             <legend>Fuel Rotary Config</legend>
 
             <label>LED Ring Start Position</label>
-            <input type="number" name="fuelRotaryOffset" step="1" value="-3">
+            <input class="config-var" type="number" name="fuelRotaryOffset" step="1" value="-3">
 
             <div class="chk">
-                <input type="checkbox" name="fuelMirrored" />
+                <input class="config-var" type="checkbox" name="fuelMirrored" />
                 <label>Mirror gauge to fill rotary</label>
             </div>
 
             <div class="colours">
                 <div>
                     <label>Unfilled Segment</label>
-                    <input type="color" name="fuelBgC" value="#003200" />
+                    <input class="config-var" type="color" name="fuelBgC" value="#003200" />
                 </div>
                 <div>
                     <label>Filled Segment</label>
-                    <input type="color" name="fuelSeg" value="#00ff00" />
+                    <input class="config-var" type="color" name="fuelSeg" value="#00ff00" />
                 </div>
                 <div>
                     <label>Last Segment Inactive</label>
-                    <input type="color" name="fuelLastSegBgC" value="#320000" />
+                    <input class="config-var" type="color" name="fuelLastSegBgC" value="#320000" />
                 </div>
                 <div>
                     <label>Last Segment Active</label>
-                    <input type="color" name="fuelLastSegC" value="#ff0000" />
+                    <input class="config-var" type="color" name="fuelLastSegC" value="#ff0000" />
                 </div>
                 <div>
                     <label>In Lap Flash</label>
-                    <input type="color" name="fuelFlashC" value="#ff0000" />
+                    <input class="config-var" type="color" name="fuelFlashC" value="#ff0000" />
                 </div>
             </div>
 
@@ -203,38 +203,38 @@
             <legend>BB Rotary Config</legend>
 
             <label>LED Ring Start Position</label>
-            <input type="number" name="bbRotaryOffset" step="1" value="0">
+            <input class="config-var" type="number" name="bbRotaryOffset" step="1" value="0">
 
             <div class="chk">
-                <input type="checkbox" name="bbInverted" />
+                <input class="config-var" type="checkbox" name="bbInverted" />
                 <label>Invert Forward/Backward Clicks</label>
             </div>
 
             <div class="chk">
-                <input type="checkbox" name="bbFill" checked="true" />
+                <input class="config-var" type="checkbox" name="bbFill" checked="true" />
                 <label>Fill Segments Between Mid/Clicks</label>
             </div>
 
             <div class="colours">
                 <div>
                     <label>Forward Segment</label>
-                    <input type="color" name="bbLevelFC" value="#00ff00" />
+                    <input class="config-var" type="color" name="bbLevelFC" value="#00ff00" />
                 </div>
                 <div>
                     <label>Backward Segment</label>
-                    <input type="color" name="bbLevelBC" value="#ff0000" />
+                    <input class="config-var" type="color" name="bbLevelBC" value="#ff0000" />
                 </div>
                 <div>
                     <label>Background Segments</label>
-                    <input type="color" name="bbBgC" value="#323232" />
+                    <input class="config-var" type="color" name="bbBgC" value="#323232" />
                 </div>
                 <div>
                     <label>Active Middle Segment</label>
-                    <input type="color" name="bbMiddleC" value="#0000ff" />
+                    <input class="config-var" type="color" name="bbMiddleC" value="#0000ff" />
                 </div>
                 <div>
                     <label>Inactive Middle Segment</label>
-                    <input type="color" name="bbMiddleBgC" value="#000032" />
+                    <input class="config-var" type="color" name="bbMiddleBgC" value="#000032" />
                 </div>
             </div>
 
@@ -244,24 +244,24 @@
             <legend>P2P Rotary Config</legend>
 
             <label>LED Ring Start Position</label>
-            <input type="number" name="p2pRotaryOffset" step="1" value="-3">
+            <input class="config-var" type="number" name="p2pRotaryOffset" step="1" value="-3">
 
             <div class="colours">
                 <div>
                     <label>Available Charges</label>
-                    <input type="color" name="p2pLevelC" value="#eb8f34" />
+                    <input class="config-var" type="color" name="p2pLevelC" value="#eb8f34" />
                 </div>
                 <div>
                     <label>Background</label>
-                    <input type="color" name="p2pBgC" value="#794a1b" />
+                    <input class="config-var" type="color" name="p2pBgC" value="#794a1b" />
                 </div>
                 <div>
                     <label>Activated Flash</label>
-                    <input type="color" name="p2pActivated" value="#00ff00" />
+                    <input class="config-var" type="color" name="p2pActivated" value="#00ff00" />
                 </div>
                 <div>
                     <label>None Left</label>
-                    <input type="color" name="p2pNoneC" value="#ff0000" />
+                    <input class="config-var" type="color" name="p2pNoneC" value="#ff0000" />
                 </div>
             </div>
 

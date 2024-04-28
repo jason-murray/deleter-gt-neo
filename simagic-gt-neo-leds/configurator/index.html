@@ -80,6 +80,16 @@
                 </div>
 
                 <div>
+                    <input class="config-var" type="radio" name="rotaryFeature[0]" value="fArbRotary" />
+                    <label>Front ARB Blades</label>
+                </div>
+
+                <div>
+                    <input class="config-var" type="radio" name="rotaryFeature[0]" value="rArbRotary" />
+                    <label>Rear ARB Blades</label>
+                </div>
+
+                <div>
                     <input class="config-var" type="radio" name="rotaryFeature[0]" value="false" />
                     <label>None</label>
                 </div>
@@ -235,6 +245,28 @@
                 <div>
                     <label>Inactive Middle Segment</label>
                     <input class="config-var" type="color" name="bbMiddleBgC" value="#000032" />
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="feature-config">
+            <legend>ARB Config</legend>
+
+            <label>Front LED Ring Start Position</label>
+            <input class="config-var" type="number" name="fArbOffset" step="1" value="-2">
+
+            <label>Rear LED Ring Start Position</label>
+            <input class="config-var" type="number" name="rArbOffset" step="1" value="-2">
+
+            <div class="colours">
+                <div>
+                    <label>Front Blades Level</label>
+                    <input class="config-var" type="color" name="fArbC" value="#9665f1" />
+                </div>
+                <div>
+                    <label>Rear Blades Level</label>
+                    <input class="config-var" type="color" name="rArbC" value="#ff0000" />
                 </div>
             </div>
 

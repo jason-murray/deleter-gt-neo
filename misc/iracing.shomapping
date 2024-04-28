@@ -1,0 +1,2506 @@
+{
+  "ControllerMapping": {
+    "Migrated": false,
+    "POVDirections": [],
+    "Axis3": [
+      {
+        "AxisName": 4,
+        "Direction": 0,
+        "TargetRole": "Clutch",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "AxisName": 5,
+        "Direction": 0,
+        "TargetRole": "Throttle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "AxisName": 6,
+        "Direction": 0,
+        "TargetRole": "Brake",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "AxisName": 1,
+        "Direction": 0,
+        "TargetRole": "Handbrake",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "AxisName": 2,
+        "Direction": 0,
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "AxisName": 3,
+        "Direction": 0,
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      }
+    ],
+    "Buttons": [
+      {
+        "ButtonId": 0,
+        "TargetRole": "Reset",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 1,
+        "TargetRole": "Look Left",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 2,
+        "TargetRole": "Look Right",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 3,
+        "TargetRole": "Look Up",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 4,
+        "TargetRole": "Look Down",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 5,
+        "TargetRole": "Shift Down",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 6,
+        "TargetRole": "Shift Up",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 7,
+        "TargetRole": "VChat Push To Talk",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 8,
+        "TargetRole": "Clutch 2",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 9,
+        "TargetRole": "Pit Speed Limiter",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 10,
+        "TargetRole": "Low Fuel Accept",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 11,
+        "TargetRole": "Brake Bias Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 12,
+        "TargetRole": "Brake Bias Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 13,
+        "TargetRole": "ABS Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 14,
+        "TargetRole": "ABS Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 15,
+        "TargetRole": "ABS Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 16,
+        "TargetRole": "Traction Control Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 17,
+        "TargetRole": "Traction Control Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 18,
+        "TargetRole": "Traction Control Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 19,
+        "TargetRole": "Traction Control Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 20,
+        "TargetRole": "Traction Control 2 Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 21,
+        "TargetRole": "Traction Control 2 Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 22,
+        "TargetRole": "Traction Control 2 Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 23,
+        "TargetRole": "Headlight Flash",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 24,
+        "TargetRole": "Splits Delta Next",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 25,
+        "TargetRole": "Splits Delta Prev",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 26,
+        "TargetRole": "Black Box Show Next",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 27,
+        "TargetRole": "Black Box Show Prev",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 28,
+        "TargetRole": "Black Box Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 29,
+        "TargetRole": "Black Box Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 30,
+        "TargetRole": "Black Box Next",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 31,
+        "TargetRole": "Black Box Prev",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 32,
+        "TargetRole": "Black Box Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 33,
+        "TargetRole": "SPCC Damage Report",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 34,
+        "TargetRole": "SPCC Weather Report",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 35,
+        "TargetRole": "Save Active Reset",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 36,
+        "TargetRole": "Run Active Reset",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 37,
+        "TargetRole": "Tear Off Visor",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 38,
+        "TargetRole": "Toggle Windshield Wipers",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 39,
+        "TargetRole": "Trigger Windshield Wipers",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 40,
+        "TargetRole": "Ignition",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 41,
+        "TargetRole": "Starter",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 42,
+        "TargetRole": "Push To Pass",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 43,
+        "TargetRole": "DRS",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 44,
+        "TargetRole": "Pause",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 45,
+        "TargetRole": "Handbrake",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 46,
+        "TargetRole": "Focus Next Car",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 47,
+        "TargetRole": "Focus Prev Car",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 48,
+        "TargetRole": "Next Driving Cam",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 49,
+        "TargetRole": "Prev Driving Cam",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 50,
+        "TargetRole": "Rpy Incident FF",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 51,
+        "TargetRole": "Rpy Incident Rew",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 52,
+        "TargetRole": "Clutch",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 53,
+        "TargetRole": "Shift Down 2",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 54,
+        "TargetRole": "Shift Up 2",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 55,
+        "TargetRole": "Throttle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 56,
+        "TargetRole": "Throttle 2",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 57,
+        "TargetRole": "Brake",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 58,
+        "TargetRole": "Brake 2",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 59,
+        "TargetRole": "Steer Left",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 60,
+        "TargetRole": "Steer Right",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 61,
+        "TargetRole": "Auto Chat 1",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 62,
+        "TargetRole": "Auto Chat 2",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 63,
+        "TargetRole": "Auto Chat 3",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 64,
+        "TargetRole": "Auto Chat 4",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 65,
+        "TargetRole": "Auto Chat 5",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 66,
+        "TargetRole": "Auto Chat 6",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 67,
+        "TargetRole": "Auto Chat 7",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 68,
+        "TargetRole": "Auto Chat 8",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 69,
+        "TargetRole": "Auto Chat 9",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 70,
+        "TargetRole": "Auto Chat 10",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 71,
+        "TargetRole": "Auto Chat 11",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 72,
+        "TargetRole": "Auto Chat 12",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 73,
+        "TargetRole": "Auto Chat 13",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 74,
+        "TargetRole": "Auto Chat 14",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 75,
+        "TargetRole": "Auto Chat 15",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 76,
+        "TargetRole": "Black Box F1",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 77,
+        "TargetRole": "Black Box F2",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 78,
+        "TargetRole": "Black Box F3",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 79,
+        "TargetRole": "Black Box F4",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 80,
+        "TargetRole": "Black Box F5",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 81,
+        "TargetRole": "Black Box F6",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 82,
+        "TargetRole": "Black Box F7",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 83,
+        "TargetRole": "Black Box F8",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 84,
+        "TargetRole": "Black Box F9",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 85,
+        "TargetRole": "Black Box F10",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 86,
+        "TargetRole": "Black Box F11",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 87,
+        "TargetRole": "Black Box F12",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 88,
+        "TargetRole": "Dash Box Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 89,
+        "TargetRole": "Tell Tale Reset",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 90,
+        "TargetRole": "Rev Limiter",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 91,
+        "TargetRole": "Traction Control Arm",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 92,
+        "TargetRole": "Hand Up Warning",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 93,
+        "TargetRole": "Clutch Launch Assist",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 94,
+        "TargetRole": "Brake Bias Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 95,
+        "TargetRole": "Brake Bias Fine Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 96,
+        "TargetRole": "Brake Bias Fine Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 97,
+        "TargetRole": "Brake Bias Fine Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 98,
+        "TargetRole": "Peak Brake Bias Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 99,
+        "TargetRole": "Peak Brake Bias Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 100,
+        "TargetRole": "Peak Brake Bias Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 101,
+        "TargetRole": "Brake Misc Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 102,
+        "TargetRole": "Brake Misc Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 103,
+        "TargetRole": "Brake Misc Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 104,
+        "TargetRole": "Anti Roll Front Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 105,
+        "TargetRole": "Anti Roll Front Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 106,
+        "TargetRole": "Anti Roll Front Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 107,
+        "TargetRole": "Anti Roll Rear Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 108,
+        "TargetRole": "Anti Roll Rear Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 109,
+        "TargetRole": "Anti Roll Rear Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 110,
+        "TargetRole": "Fuel Mixture Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 111,
+        "TargetRole": "Fuel Mixture Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 112,
+        "TargetRole": "Fuel Mixture Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 113,
+        "TargetRole": "Boost Level Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 114,
+        "TargetRole": "Boost Level Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 115,
+        "TargetRole": "Boost Level Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 116,
+        "TargetRole": "Launch RPM Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 117,
+        "TargetRole": "Launch RPM Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 118,
+        "TargetRole": "Launch RPM Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 119,
+        "TargetRole": "Weight Jacker Left Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 120,
+        "TargetRole": "Weight Jacker Left Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 121,
+        "TargetRole": "Weight Jacker Left Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 122,
+        "TargetRole": "Weight Jacker Right Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 123,
+        "TargetRole": "Weight Jacker Right Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 124,
+        "TargetRole": "Weight Jacker Right Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 125,
+        "TargetRole": "Shock Left Front Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 126,
+        "TargetRole": "Shock Left Front Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 127,
+        "TargetRole": "Shock Left Front Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 128,
+        "TargetRole": "Shock Right Front Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 129,
+        "TargetRole": "Shock Right Front Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 130,
+        "TargetRole": "Shock Right Front Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 131,
+        "TargetRole": "Shock Left Rear Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 132,
+        "TargetRole": "Shock Left Rear Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 133,
+        "TargetRole": "Shock Left Rear Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 134,
+        "TargetRole": "Shock Right Rear Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 135,
+        "TargetRole": "Shock Right Rear Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 136,
+        "TargetRole": "Shock Right Rear Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 137,
+        "TargetRole": "QTape Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 138,
+        "TargetRole": "QTape Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 139,
+        "TargetRole": "QTape Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 140,
+        "TargetRole": "Traction Control 3 Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 141,
+        "TargetRole": "Traction Control 3 Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 142,
+        "TargetRole": "Traction Control 3 Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 143,
+        "TargetRole": "Traction Control 4 Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 144,
+        "TargetRole": "Traction Control 4 Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 145,
+        "TargetRole": "Traction Control 4 Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 146,
+        "TargetRole": "Power Steering Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 147,
+        "TargetRole": "Power Steering Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 148,
+        "TargetRole": "Power Steering Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 149,
+        "TargetRole": "Dash Page Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 150,
+        "TargetRole": "Dash Page Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 151,
+        "TargetRole": "Dash Page Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 152,
+        "TargetRole": "Dash Page 2 Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 153,
+        "TargetRole": "Dash Page 2 Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 154,
+        "TargetRole": "Dash Page 2 Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 155,
+        "TargetRole": "Wing Front Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 156,
+        "TargetRole": "Wing Front Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 157,
+        "TargetRole": "Wing Front Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 158,
+        "TargetRole": "Wing Rear Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 159,
+        "TargetRole": "Wing Rear Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 160,
+        "TargetRole": "Wing Rear Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 161,
+        "TargetRole": "Diff Preload Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 162,
+        "TargetRole": "Diff Preload Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 163,
+        "TargetRole": "Diff Preload Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 164,
+        "TargetRole": "Diff Entry Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 165,
+        "TargetRole": "Diff Entry Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 166,
+        "TargetRole": "Diff Entry Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 167,
+        "TargetRole": "Diff Middle Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 168,
+        "TargetRole": "Diff Middle Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 169,
+        "TargetRole": "Diff Middle Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 170,
+        "TargetRole": "Diff Exit Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 171,
+        "TargetRole": "Diff Exit Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 172,
+        "TargetRole": "Diff Exit Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 173,
+        "TargetRole": "Engine Braking Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 174,
+        "TargetRole": "Engine Braking Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 175,
+        "TargetRole": "Engine Braking Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 176,
+        "TargetRole": "Engine Power Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 177,
+        "TargetRole": "Engine Power Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 178,
+        "TargetRole": "Engine Power Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 179,
+        "TargetRole": "Throttle Shape Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 180,
+        "TargetRole": "Throttle Shape Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 181,
+        "TargetRole": "Throttle Shape Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 182,
+        "TargetRole": "MGUK Regen Gain Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 183,
+        "TargetRole": "MGUK Regen Gain Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 184,
+        "TargetRole": "MGUK Regen Gain Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 185,
+        "TargetRole": "MGUK Deploy Mode Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 186,
+        "TargetRole": "MGUK Deploy Mode Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 187,
+        "TargetRole": "MGUK Deploy Mode Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 188,
+        "TargetRole": "MGUK Deploy Fixed Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 189,
+        "TargetRole": "MGUK Deploy Fixed Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 190,
+        "TargetRole": "MGUK Deploy Fixed Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 191,
+        "TargetRole": "Fuel Cut Position Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 192,
+        "TargetRole": "Fuel Cut Position Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 193,
+        "TargetRole": "Fuel Cut Position Level",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 194,
+        "TargetRole": "ABS Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 195,
+        "TargetRole": "RF Brake Attached Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 196,
+        "TargetRole": "Fuel No Cut Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 197,
+        "TargetRole": "Hys Boost Hold",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 198,
+        "TargetRole": "Hys No Boost Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 199,
+        "TargetRole": "In Lap Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 200,
+        "TargetRole": "FCY Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 201,
+        "TargetRole": "DCam FOV Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 202,
+        "TargetRole": "DCam FOV Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 203,
+        "TargetRole": "DCam Vanish Y Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 204,
+        "TargetRole": "DCam Vanish Y Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 205,
+        "TargetRole": "DCam Drv Height Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 206,
+        "TargetRole": "DCam Drv Height Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 207,
+        "TargetRole": "Toggle Virtual Mirror",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 208,
+        "TargetRole": "Toggle Edit Layout Mode",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 209,
+        "TargetRole": "Toggle Speed Gear Display",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 210,
+        "TargetRole": "Toggle Radio Display",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 211,
+        "TargetRole": "Toggle irsdk Disk Logging",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 212,
+        "TargetRole": "Toggle System Meter Display",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 213,
+        "TargetRole": "Toggle Video Timer Display",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 214,
+        "TargetRole": "Toggle Video Capture",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 215,
+        "TargetRole": "Trigger Screenshot Capture",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 216,
+        "TargetRole": "Report Latency",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 217,
+        "TargetRole": "Irsdk Driver Marker",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 218,
+        "TargetRole": "Auto FFB",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 219,
+        "TargetRole": "TChat Initiate",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 220,
+        "TargetRole": "TChat Reply",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 221,
+        "TargetRole": "TChat Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 222,
+        "TargetRole": "Toggle Ref Car",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 223,
+        "TargetRole": "Recenter Tilt Axis",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 224,
+        "TargetRole": "Reload Car Texture",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 225,
+        "TargetRole": "Next Rpy Cam Cam",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 226,
+        "TargetRole": "Prev Rpy Cam Cam",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 227,
+        "TargetRole": "Next Rpy Cam Group",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 228,
+        "TargetRole": "Prev Rpy Cam Group",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 229,
+        "TargetRole": "Rpy To Start",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 230,
+        "TargetRole": "Rpy Session Rew",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 231,
+        "TargetRole": "Rpy Rew",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 232,
+        "TargetRole": "Rpy Frame Rew",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 233,
+        "TargetRole": "Rpy Pause Play",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 234,
+        "TargetRole": "Rpy Stop",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 235,
+        "TargetRole": "Rpy Increase Rate",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 236,
+        "TargetRole": "Rpy Frame Adv",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 237,
+        "TargetRole": "Rpy FF",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 238,
+        "TargetRole": "Rpy Session FF",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 239,
+        "TargetRole": "Rpy Lap FF",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 240,
+        "TargetRole": "Rpy Lap Rew",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 241,
+        "TargetRole": "Rpy To End",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 242,
+        "TargetRole": "Focus Player Car",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 243,
+        "TargetRole": "Recenter Head Mounted Display",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 244,
+        "TargetRole": "Toggle Radar",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 245,
+        "TargetRole": "VChat Channel Next",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 246,
+        "TargetRole": "VChat Channel Prev",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 247,
+        "TargetRole": "VChat Driver Mute",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 248,
+        "TargetRole": "SPCC Volume Up",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 249,
+        "TargetRole": "SPCC Volume Down",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 250,
+        "TargetRole": "SPCC Shut Up",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 251,
+        "TargetRole": "SPCC Toggle Lap Times",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 252,
+        "TargetRole": "SPCC Anounce Leader Line",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 253,
+        "TargetRole": "LFE Volume Up",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 254,
+        "TargetRole": "LFE Volume Down",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 255,
+        "TargetRole": "Cam FOV Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 256,
+        "TargetRole": "Cam FOV Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 257,
+        "TargetRole": "Cam Exposure Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 258,
+        "TargetRole": "Cam Exposure Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 259,
+        "TargetRole": "Cam Shake Pct Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 260,
+        "TargetRole": "Cam Shake Pct Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 261,
+        "TargetRole": "Cam Vanish X Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 262,
+        "TargetRole": "Cam Vanish X Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 263,
+        "TargetRole": "Cam Vanish Y Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 264,
+        "TargetRole": "Cam Vanish Y Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 265,
+        "TargetRole": "Cam Long Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 266,
+        "TargetRole": "Cam Long Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 267,
+        "TargetRole": "Cam Lat Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 268,
+        "TargetRole": "Cam Lat Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 269,
+        "TargetRole": "Cam Alt Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 270,
+        "TargetRole": "Cam Alt Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 271,
+        "TargetRole": "Cam Yaw Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 272,
+        "TargetRole": "Cam Yaw Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 273,
+        "TargetRole": "Cam Pitch Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 274,
+        "TargetRole": "Cam Pitch Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 275,
+        "TargetRole": "Cam Roll Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 276,
+        "TargetRole": "Cam Roll Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 277,
+        "TargetRole": "Cam Near Plane Bias Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 278,
+        "TargetRole": "Cam Near Plane Bias Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 279,
+        "TargetRole": "Cam Mic Gain Bias Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 280,
+        "TargetRole": "Cam Mic Gain Bias Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 281,
+        "TargetRole": "Cam Mic Gain Bias Auto",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 282,
+        "TargetRole": "Cam Acquire Start",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 283,
+        "TargetRole": "Cam Acquire End",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 284,
+        "TargetRole": "Cam Toggle Aim Type",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 285,
+        "TargetRole": "Cam Toggle Sensor Type",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 286,
+        "TargetRole": "Cam Toggle Pos Type",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 287,
+        "TargetRole": "Cam Toggle Zoom",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 288,
+        "TargetRole": "Cam Move Mult Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 289,
+        "TargetRole": "Cam Move Mult Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 290,
+        "TargetRole": "Cam Toggle Move Mult Accel",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 291,
+        "TargetRole": "Cam Toggle Move Mult Scale",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 292,
+        "TargetRole": "Cam Toggle Parabolic Mic",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 293,
+        "TargetRole": "Cam Toggle Pitch Gyro",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 294,
+        "TargetRole": "Cam Toggle Roll Gyro",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 295,
+        "TargetRole": "Cam Toggle Aquire",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 296,
+        "TargetRole": "Cam Rad Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 297,
+        "TargetRole": "Cam Rad Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 298,
+        "TargetRole": "Cam Vel Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 299,
+        "TargetRole": "Cam Vel Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 300,
+        "TargetRole": "Cam Insert",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 301,
+        "TargetRole": "Cam Remove",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 302,
+        "TargetRole": "Cam Copy",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 303,
+        "TargetRole": "Cam Paste",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 304,
+        "TargetRole": "Group Copy",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 305,
+        "TargetRole": "Group Paste",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 306,
+        "TargetRole": "Cam Load Track",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 307,
+        "TargetRole": "Cam Save Track",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 308,
+        "TargetRole": "Cam Load Car",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 309,
+        "TargetRole": "Cam Save Car",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 310,
+        "TargetRole": "Cam Toggle Display",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 311,
+        "TargetRole": "Cam Toggle Beyond Fence",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 312,
+        "TargetRole": "Cam Toggle In Cockpit",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 313,
+        "TargetRole": "Cam Toggle Cam Ctrl Active",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 314,
+        "TargetRole": "Cam Toggle Has Weight",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 315,
+        "TargetRole": "Cam Toggle Use Shot Q",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 316,
+        "TargetRole": "Cam Toggle Cam Local Copy",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 317,
+        "TargetRole": "Cam Toggle Cam Tool",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 318,
+        "TargetRole": "Cam Toggle Focus",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 319,
+        "TargetRole": "Cam Focus Depth Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 320,
+        "TargetRole": "Cam Focus Depth Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 321,
+        "TargetRole": "Cam FNumber Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 322,
+        "TargetRole": "Cam FNumber Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 323,
+        "TargetRole": "Cam Toggle Is IR",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 324,
+        "TargetRole": "Cam IR Min Temp Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 325,
+        "TargetRole": "Cam IR Min Temp Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 326,
+        "TargetRole": "Cam IR Max Temp Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 327,
+        "TargetRole": "Cam IR Max Temp Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 328,
+        "TargetRole": "Cust Sect Set Start",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 329,
+        "TargetRole": "Cust Sect Set End",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 330,
+        "TargetRole": "Fuel To End Toggle",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 331,
+        "TargetRole": "Fuel To End Margin Inc",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 332,
+        "TargetRole": "Fuel To End Margin Dec",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 333,
+        "TargetRole": "Gear Reverse",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 334,
+        "TargetRole": "Gear Neutral",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 335,
+        "TargetRole": "Gear 1",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 336,
+        "TargetRole": "Gear 2",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 337,
+        "TargetRole": "Gear 3",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 338,
+        "TargetRole": "Gear 4",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 339,
+        "TargetRole": "Gear 5",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 340,
+        "TargetRole": "Gear 6",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 341,
+        "TargetRole": "Gear 7",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 342,
+        "TargetRole": "Gear 8",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 343,
+        "TargetRole": "Gear 9",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 344,
+        "TargetRole": "Gear 10",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 345,
+        "TargetRole": "Gear 11",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 346,
+        "TargetRole": "Gear 12",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 347,
+        "TargetRole": "Gear 13",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 348,
+        "TargetRole": "Gear 14",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      },
+      {
+        "ButtonId": 349,
+        "TargetRole": "Gear 15",
+        "FNRole": 0,
+        "FNCombo": 0,
+        "PressType": 0
+      }
+    ]
+  }
+}
